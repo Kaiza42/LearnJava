@@ -65,10 +65,10 @@ if (i == 9) { // Si i est strictement égal à 9
 }
 ```
 
-### exemple d'un if else if 
+### exemple d'un if else elseif
 
 ```java 
-int i = 50;
+int i = 50; // Déclare i 
 
 if (i <= 20) { // Si i est inférieur ou égal à 20
     System.out.println(i + " est entre 0 et 20");
