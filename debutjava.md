@@ -110,3 +110,15 @@ for (int i = 0; i <= 20; i++) { // Compte de 0 jusqu'à 20 inclus
          i--; // Décrémente i de 1 à chaque tour
       }
 ```
+
+## 🔁 La boucle `do...while` en Java
+
+```java 
+int i = 0;
+
+do {
+    // La boucle s'exécute au moins une fois
+    System.out.println(i); // Affiche la valeur actuelle de i
+    i++; // Incrémente i de 1
+} while (i <= 10); // Répète tant que i est inférieur ou égal à 10
+```
