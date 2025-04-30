@@ -94,7 +94,19 @@ if (i <= 20) { // Si i est inférieur ou égal à 20
 for (int i = 0; i <= 20; i++) { // Compte de 0 jusqu'à 20 inclus
 
     System.out.println("Le chiffre est : " + i);
-    
+
 }
 ```
 
+## 🔁 Les boucles `while` en Java
+
+```java
+ int i = 50;
+
+      while(i >= 1 ) {  // Tant que i est supérieur ou égal à 1
+
+         System.out.println("Le chiffre est : " + i );
+
+         i--; // Décrémente i de 1 à chaque tour
+      }
+```
