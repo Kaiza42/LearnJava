@@ -33,7 +33,7 @@
 
 ## 🔍 Opérateurs de comparaison
 
-| Opérateur | Signification                  | Exemple            | Résultat (si x = 5, y = 10) |
+| Opérateur | Signification                  | Exemple             | Résultat (si x = 5, y = 10) |
 |-----------|--------------------------------|---------------------|-----------------------------|
 | `==`      | Égal à                         | `x == y`            | `false`                     |
 | `!=`      | Différent de                   | `x != y`            | `true`                      |
@@ -46,8 +46,35 @@
 
 ## 🧠 Opérateurs logiques (booléens)
 
-| Opérateur | Nom         | Signification                     | Exemple                          | Résultat                         |
-|-----------|-------------|-----------------------------------|----------------------------------|----------------------------------|
-| `&&`      | ET logique  | Vrai si les 2 conditions sont vraies | `x > 0 && y > 0`               | `true` si x=5, y=10              |
-| `||`      | OU logique  | Vrai si **au moins une** est vraie | `x < 0 || y > 0`               | `true`                           |
-| `!`       | NON logique | Inverse une condition              | `!(x == 5)`                    | `false`                          |
+| Opérateur | Nom         | Signification                        | Exemple                          | Résultat                         |
+|-----------|-------------|--------------------------------------|----------------------------------|----------------------------------|
+| `&&`      | ET logique  | Vrai si les 2 conditions sont vraies | `x > 0 && y > 0`                 | `true` si x=5, y=10              |
+| `||`      | OU logique  | Vrai si **au moins une** est vraie   | `x < 0 || y > 0`                 | `true`                           |
+| `!`       | NON logique | Inverse une condition                | `!(x == 5)`                      | `false`                          |
+
+## 🔀 Les conditions en Java : if, else et else if
+
+### Exemple d'un if 
+```java 
+nt i = 10; // Déclare i
+
+if (i == 9) { // Si i est strictement égal à 9
+    System.out.println(i + " est égal à 9");
+} else { // Sinon, i n'est pas égal à 9
+    System.out.println(i + " n'est pas égal à 9"); 
+}
+```
+
+### exemple d'un if else if 
+
+```java 
+int i = 50;
+
+if (i <= 20) { // Si i est inférieur ou égal à 20
+    System.out.println(i + " est entre 0 et 20");
+} else if (i <= 40) { // Si i est entre 21 et 40 inclus
+    System.out.println(i + " est entre 21 et 40");
+} else { // Sinon, i est supérieur à 40
+    System.out.println(i + " est supérieur à 40");
+}
+```
