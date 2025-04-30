@@ -113,6 +113,8 @@ for (int i = 0; i <= 20; i++) { // Compte de 0 jusqu'à 20 inclus
 
 ## 🔁 La boucle `do...while` en Java
 
+do...while est une boucle qui exécute son bloc de code au moins une fois, puis répète l'exécution tant qu'une condition est vraie.
+
 ```java 
 int i = 0;
 
@@ -121,4 +123,59 @@ do {
     System.out.println(i); // Affiche la valeur actuelle de i
     i++; // Incrémente i de 1
 } while (i <= 10); // Répète tant que i est inférieur ou égal à 10
+```
+
+## 🔀 Le `switch` en Java 
+
+```java
+char jour = 'C';
+
+    switch(jour){
+        case 'A': 
+        System.out.println("Lundi");
+        break;
+        case 'B': 
+        System.out.println("Mardi");
+        break;
+        case 'C': 
+        System.out.println("Mercredi");
+        break;
+        case 'D':
+        System.out.println("Jeudi");
+        break;
+        case 'E':
+        System.out.println("Vendredi");
+        break;
+        case 'F': 
+        System.out.println("Samedi");
+        break;
+        case 'G':
+        System.out.println ("Dimanche");
+        break;
+        default:
+        System.out.println("On n'est quel jour ?");
+    }
+    ```
+### version plus récente du switch en java 
+
+```java 
+    char jour = 'C';
+
+    switch(jour){
+        case 'A' -> System.out.println("Lundi");
+        
+        case 'B' -> System.out.println("Mardi");
+        
+        case 'C' -> System.out.println("Mercredi");
+
+        case 'D' -> System.out.println("Jeudi");
+        
+        case 'E' -> System.out.println("Vendredi");
+        
+        case 'F' -> System.out.println("Samedi");
+        
+        case 'G' -> System.out.println ("Dimanche");
+        
+        default -> System.out.println("On n'est quel jour ?");
+    }
 ```
