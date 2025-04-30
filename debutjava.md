@@ -44,7 +44,7 @@
 
 ---
 
-## 🧠 Opérateurs logiques (booléens)
+## 🧠 Opérateurs logiques 
 
 | Opérateur | Nom         | Signification                        | Exemple                          | Résultat                         |
 |-----------|-------------|--------------------------------------|----------------------------------|----------------------------------|
@@ -54,7 +54,7 @@
 
 ## 🔀 Les conditions en Java : if, else et else if
 
-### Exemple d'un if 
+### Exemple d'un if / else
 ```java 
 nt i = 10; // Déclare i
 
@@ -65,7 +65,7 @@ if (i == 9) { // Si i est strictement égal à 9
 }
 ```
 
-### exemple d'un if else elseif
+### exemple d'un if / else if / else
 
 ```java 
 int i = 50; // Déclare i 
@@ -78,3 +78,23 @@ if (i <= 20) { // Si i est inférieur ou égal à 20
     System.out.println(i + " est supérieur à 40");
 }
 ```
+
+## 🔂 Répéter du code avec la boucle `for` en Java
+
+### 🔁 Les 3 parties d'une boucle `for` en Java
+
+| Partie           | Nom              | Rôle                                                        | Exemple         |
+|------------------|------------------|-------------------------------------------------------------|-----------------|
+| `int i = 0`      | Initialisation   | Déclare et initialise la variable de boucle                 | `int i = 0`     |
+| `i <= 10`        | Condition        | Définit si la boucle doit continuer (tant que c'est vrai)   | `i <= 10`       |
+| `i++`            | Mise à jour      | Modifie la variable à chaque tour (le **pas** de la boucle) | `i++`           |
+
+### exemple de boucle for 
+```java 
+for (int i = 0; i <= 20; i++) { // Compte de 0 jusqu'à 20 inclus
+
+    System.out.println("Le chiffre est : " + i);
+    
+}
+```
+
