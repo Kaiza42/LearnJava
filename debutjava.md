@@ -28,7 +28,26 @@
 | `System.out.print()`             | Affiche un texte sans retour à la ligne          | `System.out.print("Salut");`                    | Salut *(reste sur la même ligne)*  |
 | `System.out.printf()`            | Affichage formaté (comme en C)                   | `System.out.printf("Âge : %d ans", 25);`        | Âge : 25 ans                       |
 | `System.out.println(var);`       | Affiche la valeur d'une variable                 | `int a = 5; System.out.println(a);`             | 5                                  |
-| `System.out.printf("%.2f", 3.14159);` | Affiche un nombre à virgule avec 2 décimales| `System.out.printf("%.2f", 3.14159);`           | 3.14                               |
+| `System.out.printf("%.2f", 3.14159);`| Affiche un nombre à virgule avec 2 décimales | `System.out.printf("%.2f", 3.14159);`           | 3.14                               |
 | `System.out.println();`          | Affiche uniquement un saut de ligne              | `System.out.println();`                         | *(Ligne vide)*                     |
 
+## 🔍 Opérateurs de comparaison
 
+| Opérateur | Signification                  | Exemple            | Résultat (si x = 5, y = 10) |
+|-----------|--------------------------------|---------------------|-----------------------------|
+| `==`      | Égal à                         | `x == y`            | `false`                     |
+| `!=`      | Différent de                   | `x != y`            | `true`                      |
+| `>`       | Supérieur à                    | `y > x`             | `true`                      |
+| `<`       | Inférieur à                    | `x < y`             | `true`                      |
+| `>=`      | Supérieur ou égal à            | `x >= 5`            | `true`                      |
+| `<=`      | Inférieur ou égal à            | `y <= 5`            | `false`                     |
+
+---
+
+## 🧠 Opérateurs logiques (booléens)
+
+| Opérateur | Nom         | Signification                     | Exemple                          | Résultat                         |
+|-----------|-------------|-----------------------------------|----------------------------------|----------------------------------|
+| `&&`      | ET logique  | Vrai si les 2 conditions sont vraies | `x > 0 && y > 0`               | `true` si x=5, y=10              |
+| `||`      | OU logique  | Vrai si **au moins une** est vraie | `x < 0 || y > 0`               | `true`                           |
+| `!`       | NON logique | Inverse une condition              | `!(x == 5)`                    | `false`                          |
