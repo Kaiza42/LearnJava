@@ -166,7 +166,7 @@ char jour = 'C';
         default:
         System.out.println("On n'est quel jour ?");
     }
-    ```
+```
 ### version plus récente du switch en java 
 
 ```java 
