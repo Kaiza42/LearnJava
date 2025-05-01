@@ -1,8 +1,19 @@
-# Debut Java 
+# 🧠 Sommaire
 
-## 🧾 Types de données en Java
+- [🧾 Types de données en Java avec exemples](#-types-de-données-en-java-avec-exemples)
+- [📤 Affichage dans la console en Java](#-affichage-dans-la-console-en-java)
+- [🔍 Opérateurs de comparaison](#-opérateurs-de-comparaison)
+- [🧠 Opérateurs logiques](#-opérateurs-logiques)
+- [🔀 Les conditions en Java : if, else et else if](#-les-conditions-en-java--if-else-et-else-if)
+- [🔂 Répéter du code avec la boucle for en Java](#-répéter-du-code-avec-la-boucle-for-en-java)
+- [🔁 Les boucles while en Java](#-les-boucles-while-en-java)
+- [ La boucle do...while en Java](#-la-boucle-dowhile-en-java)
+- [ Le switch en Java](#-le-switch-en-java)
 
-# 🧾 Types de données en Java avec exemples
+
+
+
+## 🧾 Types de données en Java avec exemples
 
 | Type           | Catégorie         | Description courte                                                   | Exemple de déclaration                   |
 |----------------|-------------------|----------------------------------------------------------------------|------------------------------------------|
@@ -18,9 +29,9 @@
 | `Array`        | Objet (référence) | Tableau de valeurs (ex : `int[]`, `String[]`).                       | `int[] notes = {12, 15, 18};`            |
 | `Object`       | Objet (référence) | Superclasse de tous les objets Java.                                 | `Object x = new Object();`               |
 
-## Affichage 
 
-# 📤 Affichage dans la console en Java
+
+## 📤 Affichage dans la console en Java
 
 | Méthode                          | Description                                      | Exemple                                         | Résultat dans la console           |
 |----------------------------------|--------------------------------------------------|-------------------------------------------------|------------------------------------|
