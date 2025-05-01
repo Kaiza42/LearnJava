@@ -7,8 +7,8 @@
 - [🔀 Les conditions en Java : if, else et else if](#-les-conditions-en-java--if-else-et-else-if)
 - [🔂 Répéter du code avec la boucle for en Java](#-répéter-du-code-avec-la-boucle-for-en-java)
 - [🔁 Les boucles while en Java](#-les-boucles-while-en-java)
-- [ La boucle do...while en Java](#-la-boucle-dowhile-en-java)
-- [ Le switch en Java](#-le-switch-en-java)
+- [🔁 La boucle do...while en Java](#-la-boucle-dowhile-en-java)
+- [🔀 Le switch en Java](#-le-switch-en-java)
 
 
 
