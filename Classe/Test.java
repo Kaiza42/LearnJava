@@ -1,13 +1,16 @@
+package Classe;
 
 public class Test {
-   public String name;
+   public String prenom;
+   public int attaque;
+   public boolean enVie;
+   public int attaqueSpecial;
 
-    public Test(String name) {
-        this.name = name;
+    public Test(String prenom,int attaque,boolean enVie,int attaqueSpecial) {
+        this.prenom = prenom;
+        this.attaque = attaque;
+        this.enVie = enVie;
+        this.attaqueSpecial = attaqueSpecial;
+        
     }
-
-
-public void Bonjour(){
-    System.out.println("bonjour " +  name);
-}
 }

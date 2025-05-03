@@ -190,3 +190,17 @@ char jour = 'C';
         default -> System.out.println("On n'est quel jour ?");
     }
 ```
+
+
+## Les liste 
+
+| Action                    | Méthode Java                          | Exemple                                      |
+|---------------------------|---------------------------------------|----------------------------------------------|
+| Créer une liste           | `new ArrayList<>()`                   | `List<String> list = new ArrayList<>();`     |
+| Ajouter un élément        | `add(element)`                        | `list.add("Texte");`                         |
+| Modifier un élément       | `set(index, newValue)`                | `list.set(1, "Nouveau");`                    |
+| Supprimer un élément      | `remove(index)` ou `remove(object)`   | `list.remove(0);` ou `list.remove("Texte");` |
+| Lire un élément           | `get(index)`                          | `String val = list.get(0);`                  |
+| Taille de la liste        | `size()`                              | `int taille = list.size();`                  |
+| Parcourir la liste        | `for-each` ou `for (int i=...)`       | `for (String s : list) {...}`                |
+
