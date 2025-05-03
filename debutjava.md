@@ -29,6 +29,11 @@
 | `Array`        | Objet (référence) | Tableau de valeurs (ex : `int[]`, `String[]`).                       | `int[] notes = {12, 15, 18};`            |
 | `Object`       | Objet (référence) | Superclasse de tous les objets Java.                                 | `Object x = new Object();`               |
 
+### 📘 C'est quoi un type primitif en Java ?
+
+En Java, un **type primitif** est un type de données de base fourni par le langage. Contrairement aux objets, les types primitifs **ne sont pas des instances de classe**. Ils sont utilisés pour représenter des valeurs simples et sont stockés directement en mémoire.
+
+---
 
 
 ## 📤 Affichage dans la console en Java
