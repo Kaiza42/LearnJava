@@ -9,6 +9,8 @@
 - [🔁 Les boucles while en Java](#-les-boucles-while-en-java)
 - [🔁 La boucle do...while en Java](#-la-boucle-dowhile-en-java)
 - [🔀 Le switch en Java](#-le-switch-en-java)
+- [📋Opérations courantes sur les collections Java](#opérations-courantes-sur-les-collections-java)
+
 
 
 
