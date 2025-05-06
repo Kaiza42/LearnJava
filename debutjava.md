@@ -202,7 +202,10 @@ char jour = 'C';
 
 ### 🔹 `ArrayList` & `LinkedList`
 
-Les listes permettent de stocker des éléments en **ordre**, avec possibilité de **doublons**. Elles sont idéales pour les cas où l'ordre d'insertion compte.
+Les **listes** permettent de stocker des éléments en **ordre**, avec possibilité de **doublons**. Elles sont idéales pour les cas où l'ordre d'insertion est important.
+
+- **`ArrayList`** : basée sur un tableau dynamique. Excellente pour les accès rapides par index (`get()`), mais les insertions/suppressions au milieu sont plus coûteuses.
+- **`LinkedList`** : basée sur une liste chaînée. Plus performante pour les insertions/suppressions fréquentes, notamment au début ou à la fin, mais plus lente pour l'accès direct par index.
 
 | Action                    | Méthode Java                          | Exemple                                      |
 |---------------------------|---------------------------------------|----------------------------------------------|
@@ -220,7 +223,10 @@ Les listes permettent de stocker des éléments en **ordre**, avec possibilité 
 
 ### 🔹 `HashSet` & `TreeSet`
 
-Les ensembles (`Set`) permettent de stocker des éléments **uniques**, sans doublons. `HashSet` est non ordonné, `TreeSet` trie automatiquement les éléments.
+Les **ensembles (`Set`)** ne permettent pas les doublons. Chaque élément est unique.
+
+- **`HashSet`** : non ordonné, très rapide pour les opérations de recherche et d’insertion.
+- **`TreeSet`** : trie automatiquement les éléments (ordre naturel ou avec comparateur), plus lent mais utile pour les structures triées.
 
 | Action                    | Méthode Java                          | Exemple                                      |
 |---------------------------|---------------------------------------|----------------------------------------------|
@@ -235,7 +241,10 @@ Les ensembles (`Set`) permettent de stocker des éléments **uniques**, sans dou
 
 ### 🔹 `HashMap` & `TreeMap`
 
-Les maps sont des structures associatives stockant des paires **clé → valeur**. `HashMap` ne garantit aucun ordre, tandis que `TreeMap` trie les clés.
+Les **maps** stockent des **paires clé → valeur**. Les clés sont uniques et associées à une valeur.
+
+- **`HashMap`** : accès très rapide, mais ne garantit aucun ordre.
+- **`TreeMap`** : trie les entrées selon l'ordre naturel des clés ou un comparateur.
 
 | Action                    | Méthode Java                          | Exemple                                      |
 |---------------------------|---------------------------------------|----------------------------------------------|
@@ -252,7 +261,10 @@ Les maps sont des structures associatives stockant des paires **clé → valeur*
 
 ### 🔹 `PriorityQueue` & `Queue`
 
-Les files (`Queue`) sont utilisées pour traiter les éléments selon le principe **FIFO** (First In, First Out). `PriorityQueue` trie les éléments selon leur priorité naturelle ou un comparateur.
+Les **files (`Queue`)** permettent de traiter les éléments dans l’ordre d’insertion, selon le principe **FIFO** (*First In, First Out*).
+
+- **`Queue`** : interface générale pour les files simples.
+- **`PriorityQueue`** : trie automatiquement les éléments par priorité (ordre naturel ou comparateur).
 
 | Action                      | Méthode Java                          | Exemple                                        |
 |-----------------------------|---------------------------------------|------------------------------------------------|
@@ -267,7 +279,9 @@ Les files (`Queue`) sont utilisées pour traiter les éléments selon le princip
 
 ### 🔹 `Deque` (`ArrayDeque`)
 
-Les `Deque` (double-ended queue) permettent d’ajouter et de retirer des éléments **aux deux extrémités**. On peut les utiliser comme **pile (LIFO)** ou **file (FIFO)**.
+Les **Deque** (Double-Ended Queue) permettent d’ajouter et retirer des éléments **des deux côtés**. Elles peuvent servir à la fois de **pile (LIFO)** et de **file (FIFO)**.
+
+- **`ArrayDeque`** : plus performante que `LinkedList` pour une pile ou une file.
 
 | Action                             | Méthode Java                          | Exemple                                          |
 |------------------------------------|---------------------------------------|--------------------------------------------------|
@@ -280,6 +294,8 @@ Les `Deque` (double-ended queue) permettent d’ajouter et de retirer des élém
 | Parcourir                          | `for-each` ou `iterator()`            | `for (String s : deque) {...}`                   |
 
 ---
+
+
 
 
 
