@@ -1,6 +1,6 @@
 package Classe;
 
-public abstract class Humain {
+public abstract class Humain implements Informable {
     String prenom;
     String nom;
     int age;
@@ -16,7 +16,7 @@ public abstract class Humain {
         this.taillePied = taillePied;
         this.langue = langue;
     }
-
+    @Override
     public void information(){
         System.out.println("Le prénom est : " + prenom);
         System.out.println("Le nom est : " + nom);
