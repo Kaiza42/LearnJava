@@ -12,9 +12,6 @@
 - [📋Opérations courantes sur les collections Java](#opérations-courantes-sur-les-collections-java)
 
 
-
-
-
 ## 🧾 Types de données en Java avec exemples
 
 | Type           | Catégorie         | Description courte                                                   | Exemple de déclaration                   |
