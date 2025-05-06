@@ -1,6 +1,6 @@
 package Classe;
 
-public abstract class Humain implements Informable {
+public abstract class Humain  {
     String prenom;
     String nom;
     int age;
@@ -16,13 +16,14 @@ public abstract class Humain implements Informable {
         this.taillePied = taillePied;
         this.langue = langue;
     }
-    @Override
-    public void information(){
-        System.out.println("Le prénom est : " + prenom);
-        System.out.println("Le nom est : " + nom);
-        System.out.println("L'age est : " + age);
-        System.out.println("La taille est de : " + taille);
-        System.out.println("La pointure est de : " + taillePied);
-        System.out.println("La langue est : " + langue);
+    public String getPrenom() { return prenom;}
+    public String getNom() { return nom;}
+    public int getAge(){ return age;}
+    public double getTaille(){ return taille;}
+    public double getTaillePied(){ return taillePied;}
+    public String getLangue(){ return langue;}
+
+    public static interface HumanFormatter {
+        void afficher(Humain humain);
     }
 }
