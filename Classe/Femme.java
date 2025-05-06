@@ -7,4 +7,9 @@ public class Femme extends Humain {
         this.couleurCheveux = couleurCheveux;
     }
     public String getCouleurCheveux() {return couleurCheveux;}
+
+    @Override
+    public  String getDescriptionSpecifique(){
+        return "Couleur des cheveux : " + getCouleurCheveux();
+    };
 }

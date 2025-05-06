@@ -9,4 +9,9 @@ public class Homme extends Humain {
     }
 
     public String getCouleurYeux() {return couleurYeux;}
+
+    @Override
+    public  String getDescriptionSpecifique(){
+        return "Couleur des cheveux : " + getCouleurYeux();
+    };
 }

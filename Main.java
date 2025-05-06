@@ -12,6 +12,7 @@ public class Main {
         Humain Jean = new Homme("Jean","bon",18,1.40,43 ,"japonnais","Marron" );
         Femme Ginette = new Femme("Ginnette", "jsaispas", 25, 1.34,32,"russe", "Marron" );
         formatter.afficher(Jean);
+        formatter.afficher(Ginette);
     }
 }
 

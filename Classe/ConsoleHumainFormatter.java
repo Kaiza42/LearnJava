@@ -10,11 +10,6 @@ public class ConsoleHumainFormatter implements HumainFormatter  {
         System.out.println("La taille est de : " + humain.getTaille());
         System.out.println("La pointure est de : " + humain.getTaillePied());
         System.out.println("La langue est : " + humain.getLangue());
-
-        if (humain instanceof Homme) {
-            System.out.println("Couleur des yeux : " + ((Homme) humain).getCouleurYeux());
-        } else if (humain instanceof Femme) {
-            System.out.println("Couleur de cheveux : " + ((Femme) humain).getCouleurCheveux());
-        }
+        System.out.println(humain.getDescriptionSpecifique());
     }
 }

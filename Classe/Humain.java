@@ -22,8 +22,5 @@ public abstract class Humain  {
     public double getTaille(){ return taille;}
     public double getTaillePied(){ return taillePied;}
     public String getLangue(){ return langue;}
-
-    public static interface HumanFormatter {
-        void afficher(Humain humain);
-    }
+    public abstract String getDescriptionSpecifique();
 }
