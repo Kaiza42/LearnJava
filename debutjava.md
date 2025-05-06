@@ -196,16 +196,95 @@ char jour = 'C';
     }
 ```
 
+## 📋 Opérations courantes sur les collections Java
 
-## Les liste 
+---
+
+### 🔹 `ArrayList` & `LinkedList`
+
+Les listes permettent de stocker des éléments en **ordre**, avec possibilité de **doublons**. Elles sont idéales pour les cas où l'ordre d'insertion compte.
 
 | Action                    | Méthode Java                          | Exemple                                      |
 |---------------------------|---------------------------------------|----------------------------------------------|
-| Créer une liste           | `new ArrayList<>()`                   | `List<String> list = new ArrayList<>();`     |
+| Créer une liste           | `new ArrayList<>()` ou `new LinkedList<>()` | `List<String> list = new ArrayList<>();`     |
 | Ajouter un élément        | `add(element)`                        | `list.add("Texte");`                         |
-| Modifier un élément       | `set(index, newValue)`                | `list.set(1, "Nouveau");`                    |
-| Supprimer un élément      | `remove(index)` ou `remove(object)`   | `list.remove(0);` ou `list.remove("Texte");` |
+| Ajouter à une position    | `add(index, element)`                 | `list.add(1, "Texte");`                      |
+| Modifier un élément       | `set(index, newValue)`                | `list.set(0, "Modifié");`                    |
+| Supprimer par index       | `remove(index)`                       | `list.remove(0);`                            |
+| Supprimer par valeur      | `remove(object)`                      | `list.remove("Texte");`                      |
 | Lire un élément           | `get(index)`                          | `String val = list.get(0);`                  |
 | Taille de la liste        | `size()`                              | `int taille = list.size();`                  |
-| Parcourir la liste        | `for-each` ou `for (int i=...)`       | `for (String s : list) {...}`                |
+| Parcourir la liste        | `for-each`, `for`, ou `iterator()`    | `for (String s : list) {...}`                |
+
+---
+
+### 🔹 `HashSet` & `TreeSet`
+
+Les ensembles (`Set`) permettent de stocker des éléments **uniques**, sans doublons. `HashSet` est non ordonné, `TreeSet` trie automatiquement les éléments.
+
+| Action                    | Méthode Java                          | Exemple                                      |
+|---------------------------|---------------------------------------|----------------------------------------------|
+| Créer un ensemble         | `new HashSet<>()` ou `new TreeSet<>()`| `Set<String> set = new HashSet<>();`         |
+| Ajouter un élément        | `add(element)`                        | `set.add("Texte");`                          |
+| Supprimer un élément      | `remove(object)`                      | `set.remove("Texte");`                       |
+| Vérifier la présence      | `contains(object)`                    | `set.contains("Texte");`                     |
+| Taille de l'ensemble      | `size()`                              | `int taille = set.size();`                   |
+| Parcourir l'ensemble      | `for-each` ou `iterator()`            | `for (String s : set) {...}`                 |
+
+---
+
+### 🔹 `HashMap` & `TreeMap`
+
+Les maps sont des structures associatives stockant des paires **clé → valeur**. `HashMap` ne garantit aucun ordre, tandis que `TreeMap` trie les clés.
+
+| Action                    | Méthode Java                          | Exemple                                      |
+|---------------------------|---------------------------------------|----------------------------------------------|
+| Créer une map             | `new HashMap<>()` ou `new TreeMap<>()`| `Map<String, Integer> map = new HashMap<>();`|
+| Ajouter ou remplacer      | `put(key, value)`                     | `map.put("A", 1);`                            |
+| Obtenir une valeur        | `get(key)`                            | `int val = map.get("A");`                     |
+| Supprimer une entrée      | `remove(key)`                         | `map.remove("A");`                            |
+| Vérifier une clé          | `containsKey(key)`                    | `map.containsKey("A");`                       |
+| Vérifier une valeur       | `containsValue(value)`                | `map.containsValue(1);`                       |
+| Taille de la map          | `size()`                              | `int taille = map.size();`                    |
+| Parcourir les entrées     | `entrySet()` ou `for-each`            | `for (Map.Entry<String, Integer> entry : map.entrySet()) {...}` |
+
+---
+
+### 🔹 `PriorityQueue` & `Queue`
+
+Les files (`Queue`) sont utilisées pour traiter les éléments selon le principe **FIFO** (First In, First Out). `PriorityQueue` trie les éléments selon leur priorité naturelle ou un comparateur.
+
+| Action                      | Méthode Java                          | Exemple                                        |
+|-----------------------------|---------------------------------------|------------------------------------------------|
+| Créer une file              | `new PriorityQueue<>()`               | `Queue<Integer> queue = new PriorityQueue<>();`|
+| Ajouter un élément          | `add(element)` ou `offer(element)`    | `queue.add(5);` ou `queue.offer(5);`           |
+| Accéder au premier élément  | `peek()`                              | `int val = queue.peek();`                      |
+| Retirer le premier élément  | `poll()` ou `remove()`                | `queue.poll();`                                |
+| Taille de la file           | `size()`                              | `int taille = queue.size();`                   |
+| Parcourir la file           | `for-each` ou `iterator()`            | `for (int i : queue) {...}`                    |
+
+---
+
+### 🔹 `Deque` (`ArrayDeque`)
+
+Les `Deque` (double-ended queue) permettent d’ajouter et de retirer des éléments **aux deux extrémités**. On peut les utiliser comme **pile (LIFO)** ou **file (FIFO)**.
+
+| Action                             | Méthode Java                          | Exemple                                          |
+|------------------------------------|---------------------------------------|--------------------------------------------------|
+| Créer une double file              | `new ArrayDeque<>()`                  | `Deque<String> deque = new ArrayDeque<>();`      |
+| Ajouter à l’avant                  | `addFirst(element)` ou `offerFirst()` | `deque.addFirst("A");`                           |
+| Ajouter à la fin                   | `addLast(element)` ou `offerLast()`   | `deque.addLast("B");`                            |
+| Accéder au premier/dernier         | `peekFirst()` / `peekLast()`          | `String debut = deque.peekFirst();`              |
+| Retirer le premier/dernier         | `pollFirst()` / `pollLast()`          | `deque.pollLast();`                              |
+| Taille de la deque                 | `size()`                              | `int taille = deque.size();`                     |
+| Parcourir                          | `for-each` ou `iterator()`            | `for (String s : deque) {...}`                   |
+
+---
+
+
+
+
+
+
+
 
