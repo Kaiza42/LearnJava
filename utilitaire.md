@@ -157,5 +157,15 @@ String propre = s.replaceAll("-", ""); // "123456789"
 String s = "  Hello  ";
 s.strip(); // "Hello"
 ```
+## 🧮 Mathématique en Java
 
+Voici une compilation des "petits mots" liés aux mathématiques en Java, incluant la classe `Math` ainsi que d'autres méthodes utiles provenant de classes comme `Integer`, `Double`, `Character`, etc.
 
+---
+
+### 📑 Sommaire
+
+- [📏 Opérations de base (`Math`)](#-opérations-de-base-math)
+- [🔢 Conversions numériques (`Integer`, `Double`, etc.)](#-conversions-numériques-integer-double-etc)
+- [🔠 Analyse de caractères numériques (`Character`)](#-analyse-de-caractères-numériques-character)
+- [⚙️ Manipulations binaires (`Integer`)](#-manipulations-binaires-integer)
