@@ -9,7 +9,7 @@ public class Femme extends Humain {
     public String getCouleurCheveux() {return couleurCheveux;}
 
     @Override
-    public  String getDescriptionSpecifique(){
+    public String getDescriptionSpecifique(){
         return "Couleur des cheveux : " + getCouleurCheveux();
     };
 }

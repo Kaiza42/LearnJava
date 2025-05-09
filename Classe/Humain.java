@@ -1,12 +1,12 @@
 package Classe;
 
-public abstract class Humain  {
-    String prenom;
-    String nom;
-    int age;
-    double taille;
-    double taillePied;
-    String langue;
+public abstract class Humain {
+    private String prenom;
+    private String nom;
+    private int age;
+    private double taille;
+    private double taillePied;
+    private String langue;
 
     public Humain(String prenom,String nom, int age, double taille, double taillePied, String langue) {
         this.prenom = prenom;

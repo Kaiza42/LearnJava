@@ -265,7 +265,7 @@ Les **files (`Queue`)** permettent de traiter les éléments dans l’ordre d’
 - **`Queue`** : interface générale pour les files simples.
 - **`PriorityQueue`** : trie automatiquement les éléments par priorité (ordre naturel ou comparateur).
 
-| Action                      | Méthode Java                          | Exemple                                        |
+| Action                      | Méthode Java                          | Exemple                                        |z
 |-----------------------------|---------------------------------------|------------------------------------------------|
 | Créer une file              | `new PriorityQueue<>()`               | `Queue<Integer> queue = new PriorityQueue<>();`|
 | Ajouter un élément          | `add(element)` ou `offer(element)`    | `queue.add(5);` ou `queue.offer(5);`           |
@@ -282,15 +282,15 @@ Les **Deque** (Double-Ended Queue) permettent d’ajouter et retirer des éléme
 
 - **`ArrayDeque`** : plus performante que `LinkedList` pour une pile ou une file.
 
-| Action                             | Méthode Java                          | Exemple                                          |
-|------------------------------------|---------------------------------------|--------------------------------------------------|
-| Créer une double file              | `new ArrayDeque<>()`                  | `Deque<String> deque = new ArrayDeque<>();`      |
-| Ajouter à l’avant                  | `addFirst(element)` ou `offerFirst()` | `deque.addFirst("A");`                           |
-| Ajouter à la fin                   | `addLast(element)` ou `offerLast()`   | `deque.addLast("B");`                            |
-| Accéder au premier/dernier         | `peekFirst()` / `peekLast()`          | `String debut = deque.peekFirst();`              |
-| Retirer le premier/dernier         | `pollFirst()` / `pollLast()`          | `deque.pollLast();`                              |
-| Taille de la deque                 | `size()`                              | `int taille = deque.size();`                     |
-| Parcourir                          | `for-each` ou `iterator()`            | `for (String s : deque) {...}`                   |
+| Action                             | Exemple                                          | Méthode Java                          |
+|------------------------------------|--------------------------------------------------|---------------------------------------|
+| Créer une double file              | `Deque<String> deque = new ArrayDeque<>();`      | `new ArrayDeque<>()`                  |
+| Ajouter à l’avant                  | `deque.addFirst("A");`                           | `addFirst(element)` ou `offerFirst()` |
+| Ajouter à la fin                   | `deque.addLast("B");`                            | `addLast(element)` ou `offerLast()`   |
+| Accéder au premier/dernier         | `String debut = deque.peekFirst();`              | `peekFirst()` / `peekLast()`          |
+| Retirer le premier/dernier         | `deque.pollLast();`                              | `pollFirst()` / `pollLast()`          |
+| Taille de la deque                 | `int taille = deque.size();`                     | `size()`                              |
+| Parcourir                          | `for (String s : deque) {...}`                   | `for-each` ou `iterator()`            |
 
 ---
 
