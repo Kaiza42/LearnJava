@@ -18,6 +18,7 @@ Voici les méthodes les plus utilisées sur les chaînes de caractères en Java,
 ## 🧠 Sommaire
 - [🔤 Manipulation de chaînes (`String`)](#-manipulation-de-chaînes-string)
 - [🧮 Mathématique en Java](#-mathématique-en-java)
+- [📅 Dates & Temps en Java](#-dates--temps-en-java)
 
 ---
 
@@ -332,3 +333,83 @@ String hexa = Integer.toHexString(255); // "ff"
 int bits = Integer.bitCount(7); // 3 (car 7 = 111 en binaire)
 ```
 
+## 📅 Dates & Temps en Java
+
+Java propose plusieurs classes pour manipuler les dates, les heures et les durées.  
+Depuis Java 8, les classes de `java.time` comme `LocalDate`, `LocalDateTime`, `Duration` ou `ChronoUnit` sont recommandées.
+
+- [`LocalDate.now()`](#localdatenow)
+- [`LocalDate.of(int, int, int)`](#localdateofint-int-int)
+- [`LocalDate.parse(String)`](#localdateparsestring)
+- [`plusDays()` / `minusDays()`](#plusdays--minusdays)
+- [`getDayOfWeek()`](#getdayofweek)
+- [`isBefore()` / `isAfter()`](#isbefore--isafter)
+- [`Period.between()`](#periodbetween)
+- [`System.currentTimeMillis()`](#systemcurrenttimemillis)
+
+---
+
+### `LocalDate.now()`
+> Renvoie la date actuelle selon le système.
+
+```java
+LocalDate dateAujourdhui = LocalDate.now(); // ex : 2025-05-09
+```
+
+### `LocalDate.of(int, int, int)`
+> Crée une date spécifique (année, mois, jour).
+
+```java
+LocalDate date = LocalDate.of(2025, 12, 25); // 2025-12-25
+```
+
+### `LocalDate.parse(String)`
+> Transforme une chaîne ISO (ex : "2025-01-01") en objet LocalDate.
+
+```java
+LocalDate date = LocalDate.parse("2025-01-01");
+```
+
+### `plusDays() / minusDays()`
+> Ajoute ou enlève des jours à une date.
+
+```java
+LocalDate date = LocalDate.now().plusDays(5);    // dans 5 jours
+LocalDate avant = LocalDate.now().minusDays(3);  // il y a 3 jours
+```
+
+### `getDayOfWeek()`
+> Récupère le jour de la semaine sous forme d’énumération (MONDAY, etc.).
+
+```java
+DayOfWeek jour = LocalDate.now().getDayOfWeek(); // ex : WEDNESDAY
+```
+
+### `isBefore() / isAfter()`
+> Compare deux dates.
+
+```java
+LocalDate a = LocalDate.of(2025, 1, 1);
+LocalDate b = LocalDate.now();
+
+boolean passé = a.isBefore(b);
+boolean futur = a.isAfter(b);
+```
+
+### `Period.between()`
+> Calcule la durée entre deux dates (en années, mois, jours).
+
+```java
+LocalDate debut = LocalDate.of(2020, 1, 1);
+LocalDate fin = LocalDate.of(2025, 5, 9);
+Period periode = Period.between(debut, fin);
+// periode.getYears() = 5, getMonths() = 4, getDays() = 8
+```
+
+
+### `System.currentTimeMillis()`
+> Renvoie le nombre de millisecondes depuis le 1er janvier 1970 (UTC).
+
+```java 
+long timestamp = System.currentTimeMillis(); // ex : 1746792058635
+```
