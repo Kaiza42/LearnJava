@@ -15,11 +15,12 @@ Voici les méthodes les plus utilisées sur les chaînes de caractères en Java,
 
 ---
 
-### 📑 Sommaire
+## 🧠 Sommaire
 
+### 🔤 Manipulation de chaînes (`String`)
 - [`toLowerCase()`](#tolowercase)
 - [`toUpperCase()`](#touppercase)
-- [`substring(int début, int fin)`](#substringint-début-int-fin)
+- [`substring()`](#substringint-début-int-fin)
 - [`trim()`](#trim)
 - [`replace()`](#replace)
 - [`contains()`](#contains)
@@ -27,6 +28,14 @@ Voici les méthodes les plus utilisées sur les chaînes de caractères en Java,
 - [`charAt()`](#charat)
 - [`split()`](#split)
 - [`length()`](#length)
+- [`indexOf()`](#indexofstring-str)
+- [`lastIndexOf()`](#lastindexofstring-str)
+- [`repeat()`](#repeatint-count)
+- [`isEmpty()`](#isempty)
+- [`isBlank()`](#isblank)
+- [`compareTo()`](#comparetostring-autre)
+- [`replaceAll()`](#replaceallstring-regex-string-replacement)
+- [`strip()`](#strip)
 
 ---
 
@@ -94,3 +103,59 @@ String[] parties = date.split("/");
 String mot = "Programmation";
 int taille = mot.length(); // 13
 ```
+
+### `indexOf(String str)`
+> Donne l’indice de la première occurrence d’une sous-chaîne (ou -1 si absente).
+
+```java 
+String texte = "bonjour";
+int index = texte.indexOf("o"); // 1
+```
+
+### `lastIndexOf(String str)`
+> Donne l’indice de la dernière occurrence.
+
+```java 
+String texte = "banane";
+int index = texte.lastIndexOf("a"); // 3
+```
+
+### `repeat(int count)`
+> Répète la chaîne un certain nombre de fois.
+
+```java 
+String ligne = "-".repeat(10); // "----------"
+```
+
+### `isEmpty()`
+> Vérifie si la chaîne est vide ("", mais pas null).
+
+```java 
+String s = "";
+boolean vide = s.isEmpty(); // true
+```
+
+### `isBlank()`
+> Compare deux chaînes selon l’ordre alphabétique.
+
+```java 
+"abc".compareTo("abd"); // renvoie un nombre négatif
+```
+
+### `replaceAll(String regex, String replacement)`
+> Remplace toutes les correspondances d’une expression régulière.
+
+```java
+String s = "123-456-789";
+String propre = s.replaceAll("-", ""); // "123456789"
+```
+
+### `strip()`
+> Comme trim(), mais gère mieux les caractères Unicode.
+
+```java 
+String s = "  Hello  ";
+s.strip(); // "Hello"
+```
+
+
