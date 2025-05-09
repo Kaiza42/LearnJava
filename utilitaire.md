@@ -16,8 +16,12 @@ Voici les méthodes les plus utilisées sur les chaînes de caractères en Java,
 ---
 
 ## 🧠 Sommaire
+- [🔤 Manipulation de chaînes (`String`)](#-manipulation-de-chaînes-string)
+- [🧮 Mathématique en Java](#-mathématique-en-java)
 
-### 🔤 Manipulation de chaînes (`String`)
+---
+
+### 🔤 Manipulation de chaînes 
 - [`toLowerCase()`](#tolowercase)
 - [`toUpperCase()`](#touppercase)
 - [`substring()`](#substringint-début-int-fin)
@@ -161,11 +165,170 @@ s.strip(); // "Hello"
 
 Voici une compilation des "petits mots" liés aux mathématiques en Java, incluant la classe `Math` ainsi que d'autres méthodes utiles provenant de classes comme `Integer`, `Double`, `Character`, etc.
 
----
-
-### 📑 Sommaire
-
 - [📏 Opérations de base (`Math`)](#-opérations-de-base-math)
+    - [`Math.abs()`](#mathabsint)
+    - [`Math.sqrt()`](#mathsqrtdouble)
+    - [`Math.pow()`](#mathpowdouble-a-double-b)
+    - [`Math.round()`](#mathrounddouble)
+    - [`Math.floor()`](#mathfloordouble)
+    - [`Math.ceil()`](#mathceildouble)
+    - [`Math.max()` / `Math.min()`](#mathmax-a-b--mathmin-a-b)
+    - [`Math.random()`](#mathrandom)
+    - [`Math.PI` / `Math.E`](#mathpi--mathe)
 - [🔢 Conversions numériques (`Integer`, `Double`, etc.)](#-conversions-numériques-integer-double-etc)
+    - [`Integer.parseInt()`](#integerparseintstring)
+    - [`Double.parseDouble()`](#doubleparsedoublestring)
+    - [`String.valueOf()`](#stringvalueofint)
+    - [`new BigDecimal()`](#new-bigdecimalstring)
 - [🔠 Analyse de caractères numériques (`Character`)](#-analyse-de-caractères-numériques-character)
+    - [`Character.isDigit()`](#characterisdigitchar)
+    - [`Character.isLetter()`](#characterisletterchar)
+    - [`Character.getNumericValue()`](#charactergetnumericvaluechar)
 - [⚙️ Manipulations binaires (`Integer`)](#-manipulations-binaires-integer)
+    - [`Integer.toBinaryString()`](#integertobinarystringint)
+    - [`Integer.toHexString()`](#integertohexstringint)
+    - [`Integer.bitCount()`](#integerbitcountint)
+
+
+## 📏 Opérations de base (`Math`)
+
+### `Math.abs(int)`
+> Retourne la valeur absolue du nombre.
+
+```java
+int valeur = Math.abs(-10); // 10
+```
+### `Math.sqrt(double)`
+> Calcule la racine carrée d’un nombre.
+
+```java
+double racine = Math.sqrt(16); // 4.0
+```
+
+### `Math.pow(double a, double b)`
+> Éléve a à la puissance b.
+
+```java
+double puissance = Math.pow(2, 3); // 8.0
+```
+
+### `Math.round(double)`
+> Arrondit à l’entier le plus proche.
+
+```java
+long arrondi = Math.round(3.6); // 4
+```
+
+### `Math.floor(double)`
+> Arrondit vers le bas (plancher).
+
+```java
+double bas = Math.floor(5.9); // 5.0
+```
+
+### `Math.ceil(double)`
+> Arrondit vers le haut.
+
+```java
+double haut = Math.ceil(4.1); // 5.0
+```
+
+### `Math.max(a, b) / Math.min(a, b)`
+> Renvoie la valeur maximale ou minimale entre deux nombres.
+
+```java
+int max = Math.max(12, 7); // 12
+int min = Math.min(12, 7); // 7
+```
+
+### `Math.random()`
+> Génère un nombre aléatoire entre 0.0 (inclus) et 1.0 (exclus).
+
+```java
+double alea = Math.random(); // Exemple : 0.742
+```
+
+### `Math.PI / Math.E`
+> Constantes mathématiques utiles (π et e).
+
+```java
+double cercle = Math.PI * 2 * 3; // Utilise π
+double exponentielle = Math.E; // Constante e
+```
+
+## 🔢 Conversions numériques (Integer, Double, etc.)
+
+### `Integer.parseInt(String)`
+> Convertit une chaîne en entier.
+
+```java 
+int entier = Integer.parseInt("42"); // 42
+```
+
+### `Double.parseDouble(String)`
+> Convertit une chaîne en nombre à virgule.
+
+```java 
+double decimal = Double.parseDouble("3.14"); // 3.14
+```
+
+### `String.valueOf(int)`
+> Convertit un entier en chaîne.
+
+```java 
+String texte = String.valueOf(123); // "123"
+```
+
+### `new BigDecimal(String)`
+> Crée un nombre décimal très précis (utilisé en finance).
+
+```java
+BigDecimal prix = new BigDecimal("19.99"); // Représente précisément 19.99
+```
+
+## 🔠 Analyse de caractères numériques (Character)
+
+### `Character.isDigit(char)`
+> Vérifie si un caractère est un chiffre.
+
+```java
+boolean estChiffre = Character.isDigit('5'); // true
+```
+
+### `Character.isLetter(char)`
+> Vérifie si un caractère est une lettre.
+
+```java
+boolean estLettre = Character.isLetter('A'); // true
+```
+
+### `Character.getNumericValue(char)`
+> Convertit un caractère numérique en valeur entière.
+
+```java 
+int valeur = Character.getNumericValue('7'); // 7
+```
+
+## ⚙️ Manipulations binaires 
+
+### `Integer.toBinaryString(int)`
+> Convertit un entier en chaîne binaire.
+
+```java 
+String binaire = Integer.toBinaryString(10); // "1010"
+```
+
+### `Integer.toHexString(int)`
+> Convertit un entier en chaîne hexadécimale.
+
+```java
+String hexa = Integer.toHexString(255); // "ff"
+```
+
+### `Integer.bitCount(int)`
+> Compte le nombre de bits à 1 dans la représentation binaire d’un entier.
+
+```java
+int bits = Integer.bitCount(7); // 3 (car 7 = 111 en binaire)
+```
+
