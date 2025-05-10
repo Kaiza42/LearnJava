@@ -195,105 +195,201 @@ char jour = 'C';
     }
 ```
 
+---
+
 ## 📋 Opérations courantes sur les collections Java
+
+Java propose plusieurs interfaces de collections pour stocker, manipuler et parcourir des ensembles de valeurs. Voici les principales structures et leurs méthodes utiles, au format clair avec exemples commentés.
+
+---
+
+### 📑 Sommaire
+
+- [🔹 `ArrayList` & `LinkedList`](#-arraylist--linkedlist)
+  - [`add()`](#add)
+  - [`get()`](#get)
+  - [`set()`](#set)
+  - [`remove()`](#remove)
+  - [`size()`](#size)
+  - [`contains()`](#contains)
+- [🔹 `HashSet` & `TreeSet`](#-hashset--treeset)
+  - [`add()`](#add-1)
+  - [`remove()`](#remove-1)
+  - [`contains()`](#contains-1)
+- [🔹 `HashMap` & `TreeMap`](#-hashmap--treemap)
+  - [`put()`](#put)
+  - [`get()`](#get-1)
+  - [`remove()`](#remove-2)
+  - [`containsKey()` / `containsValue()`](#containskey--containsvalue)
+  - [`keySet()` / `values()`](#keyset--values)
+- [🔹 `PriorityQueue` & `Queue`](#-priorityqueue--queue)
+  - [`add()` / `offer()`](#add--offer)
+  - [`peek()`](#peek)
+  - [`poll()` / `remove()`](#poll--remove)
+  - [`size()`](#size-1)
+- [🔹 `Deque` (`ArrayDeque`)](#-deque-arraydeque)
+  - [`addFirst()` / `addLast()`](#addfirst--addlast)
+  - [`peekFirst()` / `peekLast()`](#peekfirst--peeklast)
+  - [`pollFirst()` / `pollLast()`](#pollfirst--polllast)
 
 ---
 
 ### 🔹 `ArrayList` & `LinkedList`
 
-Les **listes** permettent de stocker des éléments en **ordre**, avec possibilité de **doublons**. Elles sont idéales pour les cas où l'ordre d'insertion est important.
+### `add(E element)`
+> Ajoute un élément à la fin de la liste.
+```java
+List<String> liste = new ArrayList<>();
+liste.add("Bonjour");
+```
 
-- **`ArrayList`** : basée sur un tableau dynamique. Excellente pour les accès rapides par index (`get()`), mais les insertions/suppressions au milieu sont plus coûteuses.
-- **`LinkedList`** : basée sur une liste chaînée. Plus performante pour les insertions/suppressions fréquentes, notamment au début ou à la fin, mais plus lente pour l'accès direct par index.
+### `get(int index)`
+> Récupère un élément par son index.
+```java
+String mot = liste.get(0); // "Bonjour"
+```
 
-| Action                    | Méthode Java                          | Exemple                                      |
-|---------------------------|---------------------------------------|----------------------------------------------|
-| Créer une liste           | `new ArrayList<>()` ou `new LinkedList<>()` | `List<String> list = new ArrayList<>();`     |
-| Ajouter un élément        | `add(element)`                        | `list.add("Texte");`                         |
-| Ajouter à une position    | `add(index, element)`                 | `list.add(1, "Texte");`                      |
-| Modifier un élément       | `set(index, newValue)`                | `list.set(0, "Modifié");`                    |
-| Supprimer par index       | `remove(index)`                       | `list.remove(0);`                            |
-| Supprimer par valeur      | `remove(object)`                      | `list.remove("Texte");`                      |
-| Lire un élément           | `get(index)`                          | `String val = list.get(0);`                  |
-| Taille de la liste        | `size()`                              | `int taille = list.size();`                  |
-| Parcourir la liste        | `for-each`, `for`, ou `iterator()`    | `for (String s : list) {...}`                |
+### `set(int index, E element)`
+> Remplace un élément à un index donné.
+```java
+liste.set(0, "Salut");
+```
+
+### `remove(int index)` / `remove(Object)`
+> Supprime un élément soit par son index, soit par sa valeur.
+```java
+liste.remove(0);            // supprime l'élément à l'index 0
+liste.remove("Salut");     // supprime l'élément "Salut"
+```
+
+### `size()`
+> Renvoie la taille de la liste.
+```java
+int taille = liste.size(); // Nombre d'éléments
+```
+
+### `contains(Object)`
+> Vérifie si un élément est présent.
+```java
+boolean present = liste.contains("Bonjour");
+```
 
 ---
 
 ### 🔹 `HashSet` & `TreeSet`
 
-Les **ensembles (`Set`)** ne permettent pas les doublons. Chaque élément est unique.
+### `add(E element)`
+> Ajoute un élément unique dans l'ensemble.
+```java
+Set<String> set = new HashSet<>();
+set.add("A");
+```
 
-- **`HashSet`** : non ordonné, très rapide pour les opérations de recherche et d’insertion.
-- **`TreeSet`** : trie automatiquement les éléments (ordre naturel ou avec comparateur), plus lent mais utile pour les structures triées.
+### `remove(Object)`
+> Supprime un élément de l'ensemble.
+```java
+set.remove("A");
+```
 
-| Action                    | Méthode Java                          | Exemple                                      |
-|---------------------------|---------------------------------------|----------------------------------------------|
-| Créer un ensemble         | `new HashSet<>()` ou `new TreeSet<>()`| `Set<String> set = new HashSet<>();`         |
-| Ajouter un élément        | `add(element)`                        | `set.add("Texte");`                          |
-| Supprimer un élément      | `remove(object)`                      | `set.remove("Texte");`                       |
-| Vérifier la présence      | `contains(object)`                    | `set.contains("Texte");`                     |
-| Taille de l'ensemble      | `size()`                              | `int taille = set.size();`                   |
-| Parcourir l'ensemble      | `for-each` ou `iterator()`            | `for (String s : set) {...}`                 |
+### `contains(Object)`
+> Vérifie la présence d'un élément.
+```java
+boolean existe = set.contains("A");
+```
 
 ---
 
 ### 🔹 `HashMap` & `TreeMap`
 
-Les **maps** stockent des **paires clé → valeur**. Les clés sont uniques et associées à une valeur.
+### `put(K key, V value)`
+> Ajoute ou met à jour une paire clé-valeur.
+```java
+Map<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+```
 
-- **`HashMap`** : accès très rapide, mais ne garantit aucun ordre.
-- **`TreeMap`** : trie les entrées selon l'ordre naturel des clés ou un comparateur.
+### `get(Object key)`
+> Récupère la valeur associée à une clé.
+```java
+int age = map.get("Alice");
+```
 
-| Action                    | Méthode Java                          | Exemple                                      |
-|---------------------------|---------------------------------------|----------------------------------------------|
-| Créer une map             | `new HashMap<>()` ou `new TreeMap<>()`| `Map<String, Integer> map = new HashMap<>();`|
-| Ajouter ou remplacer      | `put(key, value)`                     | `map.put("A", 1);`                            |
-| Obtenir une valeur        | `get(key)`                            | `int val = map.get("A");`                     |
-| Supprimer une entrée      | `remove(key)`                         | `map.remove("A");`                            |
-| Vérifier une clé          | `containsKey(key)`                    | `map.containsKey("A");`                       |
-| Vérifier une valeur       | `containsValue(value)`                | `map.containsValue(1);`                       |
-| Taille de la map          | `size()`                              | `int taille = map.size();`                    |
-| Parcourir les entrées     | `entrySet()` ou `for-each`            | `for (Map.Entry<String, Integer> entry : map.entrySet()) {...}` |
+### `remove(Object key)`
+> Supprime une entrée par sa clé.
+```java
+map.remove("Alice");
+```
+
+### `containsKey()` / `containsValue()`
+> Vérifie la présence d'une clé ou d'une valeur.
+```java
+map.containsKey("Alice");
+map.containsValue(30);
+```
+
+### `keySet()` / `values()`
+> Récupère les clés ou les valeurs du dictionnaire.
+```java
+Set<String> cles = map.keySet();
+Collection<Integer> valeurs = map.values();
+```
 
 ---
 
 ### 🔹 `PriorityQueue` & `Queue`
 
-Les **files (`Queue`)** permettent de traiter les éléments dans l’ordre d’insertion, selon le principe **FIFO** (*First In, First Out*).
+### `add(E)` / `offer(E)`
+> Ajoute un élément à la file.
+```java
+Queue<Integer> queue = new PriorityQueue<>();
+queue.add(10);
+queue.offer(5);
+```
 
-- **`Queue`** : interface générale pour les files simples.
-- **`PriorityQueue`** : trie automatiquement les éléments par priorité (ordre naturel ou comparateur).
+### `peek()`
+> Récupère le premier élément sans le supprimer.
+```java
+int premier = queue.peek();
+```
 
-| Action                      | Méthode Java                          | Exemple                                        |z
-|-----------------------------|---------------------------------------|------------------------------------------------|
-| Créer une file              | `new PriorityQueue<>()`               | `Queue<Integer> queue = new PriorityQueue<>();`|
-| Ajouter un élément          | `add(element)` ou `offer(element)`    | `queue.add(5);` ou `queue.offer(5);`           |
-| Accéder au premier élément  | `peek()`                              | `int val = queue.peek();`                      |
-| Retirer le premier élément  | `poll()` ou `remove()`                | `queue.poll();`                                |
-| Taille de la file           | `size()`                              | `int taille = queue.size();`                   |
-| Parcourir la file           | `for-each` ou `iterator()`            | `for (int i : queue) {...}`                    |
+### `poll()` / `remove()`
+> Récupère et supprime le premier élément.
+```java
+int retiré = queue.poll();
+```
+
+### `size()`
+> Donne la taille de la file.
+```java
+int taille = queue.size();
+```
 
 ---
 
 ### 🔹 `Deque` (`ArrayDeque`)
 
-Les **Deque** (Double-Ended Queue) permettent d’ajouter et retirer des éléments **des deux côtés**. Elles peuvent servir à la fois de **pile (LIFO)** et de **file (FIFO)**.
+### `addFirst()` / `addLast()`
+> Ajoute un élément au début ou à la fin de la deque.
+```java
+Deque<String> deque = new ArrayDeque<>();
+deque.addFirst("A");
+deque.addLast("B");
+```
 
-- **`ArrayDeque`** : plus performante que `LinkedList` pour une pile ou une file.
+### `peekFirst()` / `peekLast()`
+> Consulte le premier ou le dernier élément sans le supprimer.
+```java
+String debut = deque.peekFirst();
+String fin = deque.peekLast();
+```
 
-| Action                             | Exemple                                          | Méthode Java                          |
-|------------------------------------|--------------------------------------------------|---------------------------------------|
-| Créer une double file              | `Deque<String> deque = new ArrayDeque<>();`      | `new ArrayDeque<>()`                  |
-| Ajouter à l’avant                  | `deque.addFirst("A");`                           | `addFirst(element)` ou `offerFirst()` |
-| Ajouter à la fin                   | `deque.addLast("B");`                            | `addLast(element)` ou `offerLast()`   |
-| Accéder au premier/dernier         | `String debut = deque.peekFirst();`              | `peekFirst()` / `peekLast()`          |
-| Retirer le premier/dernier         | `deque.pollLast();`                              | `pollFirst()` / `pollLast()`          |
-| Taille de la deque                 | `int taille = deque.size();`                     | `size()`                              |
-| Parcourir                          | `for (String s : deque) {...}`                   | `for-each` ou `iterator()`            |
-
----
-
+### `pollFirst()` / `pollLast()`
+> Supprime et retourne le premier ou dernier élément.
+```java
+deque.pollFirst();
+deque.pollLast();
+```
+```
 
 
 
