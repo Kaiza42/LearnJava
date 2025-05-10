@@ -389,7 +389,7 @@ String fin = deque.peekLast();
 deque.pollFirst();
 deque.pollLast();
 ```
-```
+
 
 
 
