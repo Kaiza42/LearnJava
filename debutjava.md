@@ -10,6 +10,7 @@
 - [🔁 La boucle do...while en Java](#-la-boucle-dowhile-en-java)
 - [🔀 Le switch en Java](#-le-switch-en-java)
 - [📋Opérations courantes sur les collections Java](#opérations-courantes-sur-les-collections-java)
+- [🔁 Boucle `for-each` en Java](#-boucle-for-each-en-java)
 
 
 ## 🧾 Types de données en Java avec exemples
@@ -389,3 +390,69 @@ String fin = deque.peekLast();
 deque.pollFirst();
 deque.pollLast();
 ```
+
+
+### 🔁 Boucle `for-each` en Java
+
+La boucle `for-each` est une façon simple et claire de parcourir des tableaux ou des collections.  
+Elle est souvent utilisée avec des `List`, `Set`, ou des tableaux (`Array`, etc.).
+
+- [🔹 Syntaxe générale](#-syntaxe-générale)
+- [🔹 Exemple avec un tableau de chaînes](#-exemple-avec-un-tableau-de-chaînes)
+- [🔹 Exemple avec une `ArrayList<String>`](#-exemple-avec-une-arrayliststring)
+- [🔹 Exemple avec des objets (`Voiture`)](#-exemple-avec-des-objets-classe-voiture)
+
+---
+
+#### 🔹 Syntaxe générale
+
+```java
+for (Type element : collection) {
+    // Code à exécuter pour chaque élément
+}
+```
+
+---
+
+#### 🔹 Exemple avec un tableau de chaînes
+
+```java
+String[] fruits = {"Pomme", "Banane", "Orange"};
+
+for (String fruit : fruits) {
+    System.out.println(fruit);
+}
+```
+
+---
+
+#### 🔹 Exemple avec une `ArrayList<String>`
+
+```java
+List<String> villes = new ArrayList<>();
+villes.add("Paris");
+villes.add("Lyon");
+villes.add("Marseille");
+
+for (String ville : villes) {
+    System.out.println("Ville : " + ville);
+}
+```
+
+---
+
+#### 🔹 Exemple avec des objets (classe `Voiture`)
+
+```java
+List<Voiture> garage = new ArrayList<>();
+garage.add(new Voiture("Toyota", 120));
+garage.add(new Voiture("Peugeot", 110));
+
+for (Voiture v : garage) {
+    System.out.println(v.getMarque() + " roule à " + v.getVitesse() + " km/h");
+}
+```
+
+💡 Le `for-each` évite d’utiliser les index (`i`) et rend le code plus lisible lorsqu’on n’a pas besoin de la position.
+
+---
