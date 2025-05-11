@@ -25,6 +25,7 @@ Chaque notion est accompagnée d'exemples concrets et testables pour te permettr
 - [🧩 Classe abstraite (`abstract`)](#-classe-abstraite-abstract)
 - [🔁 Redéfinir une méthode avec `@Override`](#-redéfinir-une-méthode-avec-override)
 - [➕ Surcharge de méthode (`Overloading`)](#-surcharge-de-méthode-overloading)
+- [🎭 Polymorphisme](#-polymorphisme)
 
 ---
 
@@ -319,4 +320,60 @@ System.out.println(calc.additionner(1, 2, 3));       // 6
 🔒 ⚠️ Attention : on ne peut pas faire de surcharge **juste en changeant le type de retour** (ça ne suffit pas à différencier deux méthodes).
 
 ---
+
+## 🎭 Polymorphisme
+
+Le **polymorphisme** permet d'utiliser une référence d'un type parent pour exécuter des comportements définis dans les classes enfants. Cela permet de **rendre le code plus flexible** et **générique**.
+
+### 🔹 Définition
+Le polymorphisme repose sur la capacité d'une même méthode à avoir **des comportements différents** selon l'objet réel auquel elle s'applique, même si on passe par une référence de type parent.
+
+### 🔹 Exemple avec une hiérarchie simple
+
+```java
+public class Animal {
+    public void crier() {
+        System.out.println("L'animal fait un bruit.");
+    }
+}
+
+public class Chien extends Animal {
+    @Override
+    public void crier() {
+        System.out.println("Le chien aboie.");
+    }
+}
+
+public class Chat extends Animal {
+    @Override
+    public void crier() {
+        System.out.println("Le chat miaule.");
+    }
+}
+```
+
+### 🔹 Utilisation du polymorphisme
+
+```java
+Animal[] animaux = {
+    new Chien(),
+    new Chat(),
+    new Chien()
+};
+
+for (Animal a : animaux) {
+    a.crier();
+}
+```
+
+### 🔹 Résultat attendu
+```
+Le chien aboie.
+Le chat miaule.
+Le chien aboie.
+```
+
+✅ Même si `a` est de type `Animal`, la méthode appelée est celle de l'objet réel (`Chien` ou `Chat`) grâce au polymorphisme dynamique.
+
+--- 
 
