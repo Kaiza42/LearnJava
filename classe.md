@@ -24,6 +24,7 @@ Chaque notion est accompagnée d'exemples concrets et testables pour te permettr
   - [7. Appeler le parent avec `super`](#7-appeler-le-parent-avec-super)
 - [🧩 Classe abstraite (`abstract`)](#-classe-abstraite-abstract)
 - [🔁 Redéfinir une méthode avec `@Override`](#-redéfinir-une-méthode-avec-override)
+- [➕ Surcharge de méthode (`Overloading`)](#-surcharge-de-méthode-overloading)
 
 ---
 
@@ -213,7 +214,7 @@ monChien.dormir();     // Rex dort...
 > On ne peut **pas** créer une instance directe d'une classe abstraite :
 
 ```java
-Animal a = new Animal("Mystère"); // ❌ Erreur : classe abstraite non instanciable
+Animal a = new Animal("Mystère"); // ❌  classe abstraite non instanciable
 ```
 
 ---
@@ -238,7 +239,7 @@ public class Animal {
 }
 
 public class Chat extends Animal {
-    //  mauvaise signature ! Ne redéfinit PAS parler()
+    //  Ne redéfinit PAS parler()
     public void parlerr() {
         System.out.println("Le chat miaule.");
     }
@@ -268,12 +269,54 @@ public class Chat extends Animal {
 
 ```java
 Animal animal = new Chat();
-animal.parler(); // Affiche : Le chat miaule.
+animal.parler(); //  Le chat miaule.
 ```
 
 ✅ Grâce à `@Override`, on est sûr que `parler()` redéfinit bien la méthode héritée de `Animal`.
 
 💡 Le polymorphisme fonctionne ici : on appelle `parler()` via un `Animal`, mais c’est la version de `Chat` qui s’exécute.
+
+---
+
+## ➕ Surcharge de méthode (`Overloading`)
+
+La **surcharge** (ou *overloading*) consiste à définir **plusieurs méthodes avec le même nom**, mais avec **des paramètres différents**.
+
+### 🔹 Pourquoi faire de l'overloading ?
+- Pour utiliser le **même nom de méthode** dans des cas différents
+- Pour **simplifier l'interface** d'une classe sans dupliquer les noms
+
+### 🔹 Exemple de méthode surchargée
+
+```java
+public class Additionneur {
+
+    public int additionner(int a, int b) {
+        return a + b;
+    }
+
+    public double additionner(double a, double b) {
+        return a + b;
+    }
+
+    public int additionner(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+```
+
+### 🔹 Utilisation
+
+```java
+Additionneur calc = new Additionneur();
+System.out.println(calc.additionner(2, 3));          // 5
+System.out.println(calc.additionner(2.5, 3.1));      // 5.6
+System.out.println(calc.additionner(1, 2, 3));       // 6
+```
+
+💡 Le compilateur choisit automatiquement la bonne méthode selon les **types et le nombre de paramètres**.
+
+🔒 ⚠️ Attention : on ne peut pas faire de surcharge **juste en changeant le type de retour** (ça ne suffit pas à différencier deux méthodes).
 
 ---
 
