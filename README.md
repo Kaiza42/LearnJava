@@ -15,7 +15,7 @@ L'objectif de ce projet est de :
 # 🧠 Sommaire 
 
 - [Les début](debutjava.md)
-- [Suite](classe.md)
+- [Classe](classe.md)
 - [Utilitaire](utilitaire.md)
 
 

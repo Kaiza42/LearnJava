@@ -1,6 +1,14 @@
-# 📘 SuiteJava : Documentation des concepts avancés
+# 📘 Classe : Concepts avancés en Java
 
-Bienvenue dans **SuiteJava**, un document complémentaire qui approfondit certains concepts fondamentaux du langage Java, avec des exemples progressifs et testables. Ce fichier est conçu comme un bloc d'entraînement pratique, orienté vers la compréhension des mécanismes internes du langage.
+Bienvenue dans la documentation **Classe**, un guide structuré pour explorer les mécanismes avancés liés aux **classes en Java**. Ici, tu trouveras une progression logique et illustrée pour bien comprendre :
+
+- la construction de classes
+- les attributs et méthodes
+- l'encapsulation
+- l'héritage
+- l'utilisation de `super`, `abstract`, `@Override`, etc.
+
+Chaque notion est accompagnée d'exemples concrets et testables pour te permettre de t'entraîner et de mieux maîtriser la **programmation orientée objet (POO)** en Java.
 
 ---
 
@@ -209,4 +217,3 @@ Animal a = new Animal("Mystère"); // ❌ Erreur : classe abstraite non instanci
 
 ---
 
-✅ Les classes abstraites permettent de **partager du code commun** tout en **forçant une structure** dans les classes filles.
