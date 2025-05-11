@@ -17,5 +17,5 @@ L'objectif de ce projet est de :
 - [Les début](debutjava.md)
 - [Classe](classe.md)
 - [Utilitaire](utilitaire.md)
-
+- [Gestion des erreurs](gestion-erreurs.md)
 
