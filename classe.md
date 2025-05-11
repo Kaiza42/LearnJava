@@ -23,6 +23,7 @@ Chaque notion est accompagnée d'exemples concrets et testables pour te permettr
   - [6. Héritage avec `extends`](#6-héritage-avec-extends)
   - [7. Appeler le parent avec `super`](#7-appeler-le-parent-avec-super)
 - [🧩 Classe abstraite (`abstract`)](#-classe-abstraite-abstract)
+- [🔁 Redéfinir une méthode avec `@Override`](#-redéfinir-une-méthode-avec-override)
 
 ---
 
@@ -214,6 +215,65 @@ monChien.dormir();     // Rex dort...
 ```java
 Animal a = new Animal("Mystère"); // ❌ Erreur : classe abstraite non instanciable
 ```
+
+---
+
+## 🔁 Redéfinir une méthode avec `@Override`
+
+Le mot-clé `@Override` permet d'indiquer qu'une méthode redéfinit une version héritée d'une classe parente ou d'une interface.
+Cela permet au compilateur de vérifier qu'on respecte bien la signature de la méthode originale (même nom, même paramètres).
+
+### 🔹 Pourquoi utiliser `@Override` ?
+- Pour **garantir** qu’on redéfinit bien une méthode existante.
+- Pour **éviter les erreurs de frappe** : sans `@Override`, une méthode mal écrite serait acceptée comme nouvelle méthode.
+- Pour **documenter l’intention** du code : "je veux écraser un comportement hérité".
+
+### 🔹 Exemple sans `@Override` (dangereux)
+
+```java
+public class Animal {
+    public void parler() {
+        System.out.println("L'animal fait un bruit.");
+    }
+}
+
+public class Chat extends Animal {
+    //  mauvaise signature ! Ne redéfinit PAS parler()
+    public void parlerr() {
+        System.out.println("Le chat miaule.");
+    }
+}
+```
+
+👉 `Chat` n’écrase pas `parler()`. Elle définit une **nouvelle méthode**, ce qui peut causer des bugs.
+
+### 🔹 Exemple correct avec `@Override`
+
+```java
+public class Animal {
+    public void parler() {
+        System.out.println("L'animal fait un bruit.");
+    }
+}
+
+public class Chat extends Animal {
+    @Override
+    public void parler() {
+        System.out.println("Le chat miaule.");
+    }
+}
+```
+
+### 🔹 Utilisation
+
+```java
+Animal animal = new Chat();
+animal.parler(); // Affiche : Le chat miaule.
+```
+
+✅ Grâce à `@Override`, on est sûr que `parler()` redéfinit bien la méthode héritée de `Animal`.
+
+💡 Le polymorphisme fonctionne ici : on appelle `parler()` via un `Animal`, mais c’est la version de `Chat` qui s’exécute.
 
 ---
 
