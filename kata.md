@@ -270,8 +270,43 @@ public class Kata {
 }
 ```
 
-# / 20
+# Jenny's secret message kyu 8 / 20
 
 ```java
-
+public class Greeter {
+  public static String greet(String name) {
+    
+    
+    
+    if(name == "Johnny"){
+      return "Hello, my love!";
+    }else {
+      return "Hello, "+ name+ "!";
+    }
+  }
+}
 ```
+
+# Remove exclamation marks kyu 8 /21
+
+```java
+class Solution {
+    static String removeExclamationMarks(String s) {
+        return s.replace("!", "");
+    }
+}
+```
+
+# Grasshopper - Messi goals function kyu 8 / 22
+
+```java
+public class Goals {
+    public static int goals(int laLigaGoals, int copaDelReyGoals, int championsLeagueGoals) {
+        int totalGoals = laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+      
+      return totalGoals;
+    }
+}
+```
+
+# 
