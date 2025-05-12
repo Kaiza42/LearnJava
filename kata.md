@@ -309,4 +309,62 @@ public class Goals {
 }
 ```
 
-# 
+# Get the Middle Character kyu 8 / 23
+
+```java
+class Kata {
+  public static String getMiddle(String word) {
+    
+    int longueur = word.length();
+    int debut = (longueur - 1) / 2;
+    int fin = longueur / 2 + 1;
+    return word.substring(debut, fin);
+  }
+}
+```
+
+# You Can't Code Under Pressure #1 / 24
+
+```java
+class Java {
+  public static int doubleInteger(int i) {
+    
+    return i + i;
+  }
+}
+```
+
+# Isograms kyu 7 /25
+
+```java
+public class isogram {
+    public static boolean  isIsogram(String str) {
+        str = str.toLowerCase();
+        for(int i = 0; i < str.length(); i++){
+          
+          char charactere = str.charAt(i);
+          
+          if (str.indexOf(charactere) != str.lastIndexOf(charactere)){
+            return false;
+          }
+       }
+              return true;
+    }
+}
+```
+
+# Sum Arrays kyu 8 / 26
+
+```java
+public class SumArray {
+
+  public static double sum(double[] numbers) {
+    double resultat = 0.0;
+    
+    for(double number : numbers) {
+      resultat += number;
+    }
+    return resultat;
+  }
+}
+```
