@@ -437,3 +437,37 @@ public class Kata {
     }
 }
 ```
+
+# Is it even? kyu 8 / 32
+
+```java
+public class Number {
+
+  public boolean isEven(double n) {
+      if(n % 2 == 0){
+        return true; 
+      }else{
+        return false;
+      }
+      
+  }
+}
+```
+
+# I love you, a little , a lot, passionately ... not at all kyu 8 / 33
+
+```java
+public class Sid {
+    public static String howMuchILoveYou(int nb_petals) {
+        String[] phrases = {
+            "I love you",
+            "a little",
+            "a lot",
+            "passionately",
+            "madly",
+            "not at all"
+        };
+        return phrases[(nb_petals - 1) % phrases.length];
+    }
+}
+```
