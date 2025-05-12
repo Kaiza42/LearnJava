@@ -323,7 +323,7 @@ class Kata {
 }
 ```
 
-# You Can't Code Under Pressure #1 / 24
+# You Can't Code Under Pressure #1 kyu 8 / 24
 
 ```java
 class Java {
@@ -366,5 +366,74 @@ public class SumArray {
     }
     return resultat;
   }
+}
+```
+
+# Will you make it? kyu 8 / 27
+
+```java
+public class Kata {
+  
+  public static boolean zeroFuel(double distanceToPump, double mpg, double fuelLeft) {
+    return mpg * fuelLeft >= distanceToPump;
+  }
+  
+}
+```
+
+# Calculate BMI kyu 8 / 28
+
+```java
+public class Calculate {
+  public static String bmi(double weight, double height) {
+    double bmi = weight / (height * height);
+      if (bmi <= 18.5) {
+            return "Underweight";
+        } else if (bmi <= 25.0) {
+            return "Normal";
+        } else if (bmi <= 30.0) {
+            return "Overweight";
+        } else {
+            return "Obese";
+        }
+  }
+}
+```
+
+# Count by x kyu 8 / 29
+
+```java
+public class Kata{
+  public static int[] countBy(int x, int n){
+    int[] resultat = new int[n];
+    for (int i = 0; i < n; i++){
+      resultat[i] = x *  (i+1);
+    }
+    return resultat;
+  }
+}
+```
+
+# Strings end with? kyu 7 / 30
+
+```java
+public class Kata {
+  public static boolean solution(String str, String ending) {
+    return str.endsWith(ending);
+  }
+}
+```
+
+# Grasshopper - Check for factor kyu 8 /31
+
+```java
+public class Kata {
+    public static boolean checkForFactor(int base, int factor) {
+        if (base % factor == 0){
+          return true;
+        }else {
+          return false;
+        }
+    }
 }
 ```
