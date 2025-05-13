@@ -963,7 +963,77 @@ public class Parser {
 }
 ```
 
-# / 50
+# Counting sheep... kyu 8 / 50
+
+```java
+public class Counter {
+    public static int countSheeps(Boolean[] arrayOfSheeps) {
+        int sheepCounter = 0;
+    for(Boolean countSheep : arrayOfSheeps ) {
+      if(Boolean.TRUE.equals(countSheep)) {
+        sheepCounter++;
+      }
+    }
+    return sheepCounter;
+    }
+}
+```
+
+# Multiples of 3 or 5 kyu 6 / 51
+
+```java
+public class Solution {
+
+  public int solution(int number) {
+    int total = 0;
+    
+    for (int i =0; i < number; i++){
+      
+      if (i % 3 == 0 || i % 5 == 0){
+        
+        total += i;
+      }
+    }
+    return total;
+  }
+}
+```
+
+# Ex et Oh kyu 7 / 52
+
+```java
+public class XO {
+  public static boolean getXO (String str) {
+    str = str.toLowerCase();
+    int compteX = 0;
+    int compteO = 0;
+    for (char XorO : str.toCharArray()){
+      if (XorO == 'x'){
+        compteX++;  
+      }else if (XorO == 'o'){
+        compteO++;
+      }
+    }
+    return compteX == compteO;
+  }
+}
+```
+
+# Friend or Foe? kyu 7 / 53
+
+
+```java
+import java.util.List;
+import java.util.stream.Collectors;
+class Kata {
+   public static List<String> friend(List<String> x){
+     // Your code here
+     return x.stream().filter(name -> name.length() == 4).collect(Collectors.toList());
+   }
+}
+```
+
+#  / 54
 
 ```java
 
