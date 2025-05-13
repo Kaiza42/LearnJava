@@ -1033,8 +1033,61 @@ class Kata {
 }
 ```
 
-#  / 54
+# Regex validate PIN code kyu 7 / 54
 
 ```java
+public class Solution {
 
+  public static boolean validatePin(String pin) {
+     
+    return pin.matches("^\\d{4}|^\\d{6}$");
+  }
+
+}
 ```
+
+#  Remove anchor from URL kyu 7/ 55
+
+```java
+public class Kata {
+    public static String removeUrlAnchor(String url) {
+        int hashtag = url.indexOf("#");
+      return (hashtag == -1) ? url : url.substring(0,hashtag);
+    }
+}
+```
+
+# Create Phone Number kyu 6 / 56
+
+```java
+public class Kata {
+  public static String createPhoneNumber(int[] numbers) {
+    String digits = "";
+    for (int n : numbers){
+      digits += n;
+    }
+    
+    return digits.replaceFirst("(\\d{3})(\\d{3})(\\d{4})", "($1) $2-$3");
+  }
+}
+```
+
+#  Nickname Generator kyu 7 / 57
+
+```java
+class Generator {
+      public static String nickname (String name) {
+      if (name.length()< 4){
+        return "Error: Name too short";
+      }
+        
+        char troisiemeChar = Character.toLowerCase(name.charAt(2));
+        boolean voyelle = "aeiouAEIOU".indexOf(troisiemeChar) >= 0;
+        
+        return voyelle ? name.substring(0,4) : name.substring(0,3);
+      }
+}
+```
+
+# 
+
