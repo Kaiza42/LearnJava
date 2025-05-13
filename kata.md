@@ -925,10 +925,42 @@ public class GrassHopper {
 ```
 
 
-# / 49
+# parseInt() reloaded kyu 4 / 49
 
 ```java
-
+import java.util.Map;
+public class Parser {
+    
+    public static int parseInt(String numStr) {
+      Map<String, Integer> numbers = Map.ofEntries(
+      Map.entry("zero",0), Map.entry("one",1),Map.entry("two",2),Map.entry("three",3),Map.entry("four",4), Map.entry("five",5),Map.entry("six",6),
+        Map.entry("seven",7), Map.entry("eight", 8), Map.entry("nine", 9), Map.entry("ten", 10),Map.entry("eleven",11), Map.entry("twelve",12),
+      Map.entry("thirteen",13), Map.entry("fourteen",14), Map.entry("fifteen",15),Map.entry("sixteen",16), Map.entry("seventeen",17),Map.entry("eighteen",18),
+        Map.entry("nineteen",19), Map.entry("twenty",20),Map.entry("thirty",30),Map.entry("forty",40),Map.entry("fifty",50), Map.entry("sixty",60),
+        Map.entry("seventy",70),Map.entry("eighty",80),Map.entry("ninety",90),Map.entry("hundred",100), Map.entry("thousand", 1000), Map.entry("million", 1_000_000)
+        
+      );
+      
+      numStr = numStr.toLowerCase().replaceAll(" and ", " ").replaceAll("-"," ");
+      
+      int total = 0;
+      int actuel = 0;
+      
+      for (String numstreX : numStr.split(" ")) {
+        int valeur = numbers.get(numstreX);
+        if (valeur == 100){
+          actuel *= 100;
+        } else if (valeur >= 1000) {
+          total += actuel * valeur;
+          actuel =0;
+        } else {
+          actuel += valeur;
+        }
+          
+      }
+      return total + actuel;
+    }
+}
 ```
 
 # / 50
@@ -936,5 +968,3 @@ public class GrassHopper {
 ```java
 
 ```
-message.txt
-13 Ko
