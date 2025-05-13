@@ -512,10 +512,8 @@ class Java {
 public class isogram {
     public static boolean  isIsogram(String str) {
         str = str.toLowerCase();
-        for(int i = 0; i < str.length(); i++){
-          
+        for(int i = 0; i < str.length(); i++){      
           char charactere = str.charAt(i);
-          
           if (str.indexOf(charactere) != str.lastIndexOf(charactere)){
             return false;
           }
@@ -1144,4 +1142,149 @@ public class ZywOo {
  } 
 }
 ```
+
+# Reversed Strings kyu 8 / 69 
+
+```java
+public class Kata {
+
+  public static String solution(String str) {
+    // Your code here...
+    StringBuilder sub = new StringBuilder(str);
+    return sub.reverse().toString();
+  }
+
+}
+```
+
+# If you can't sleep, just count sheep!! kyu 8 / 70
+
+```java 
+class Kata {
+  public static String countingSheep(int num) {
+   String result = "";
+    for(int i = 1; i <= num; i++){
+      result += i + " sheep...";
+    }
+    return result;
+  }
+}
+```
+
+# Grasshopper - Personalized Message kyu 8 / 71
+
+```java
+class Kata {
+    static String greet(String name, String owner) {
+        if(owner.equals(name)){
+          return "Hello boss";
+          }else {
+          return "Hello guest";
+        }
+    }
+}
+```
+
+# L1: Set Alarm kyu 8 / 72
+
+```java
+public class Alarm {
+  
+  public static boolean setAlarm(boolean employed, boolean vacation) {
+    if(employed == true && vacation == true){
+      return false;
+    }else if (employed == true && vacation == false){
+      return true;
+    }else if (employed == false && vacation == true){
+      return false;
+    }else {
+      return false;
+    }
+  }
+
+}
+```
+
+# Grasshopper - Debug sayHello kyu 8 / 73
+```java
+public class GrassHopper {
+
+    public static String sayHello(String name) {
+
+        return "Hello, " + name; 
+    }
+}
+```
+
+# Drink about kyu 8 / 74
+
+```java
+public class Drinks{
+  
+  public static String peopleWithAgeDrink(int age){
+   if (age < 14){
+    return "drink toddy";
+  }else if (age < 18){
+    return "drink coke";
+  }else if (age < 21){
+    return "drink beer";
+  }else{
+  return  "drink whisky";
+  }
+  }
+}
+```
+
+# Grasshopper - Messi Goals kyu 8 / 75
+
+```java
+public class Goals {
+    public static int laLigaGoals = 43;
+    public static int championsLeagueGoals = 10;
+    public static int copaDelReyGoals = 5;
+
+    public static int totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+}
+```
+
+# Count Odd Numbers below n kyu 8 / 76
+
+
+```java 
+public class Kata {
+
+  public static int oddCount(int n){
+
+    return (int)Math.floor(n/2);
+  }
+
+}
+```
+
+#  Plural kyu 8 / 77
+
+```java
+public class Plural{
+  public static boolean isPlural(float f){
+    if(f == 1){
+      return false;
+    }else {
+      return true;
+    }
+  }
+}
+```
+
+# Price of Mangoes kyu 8 / 78
+
+```java
+public class Mango{
+  public static int mango(int quantity, int price){
+    int paidMangoes = quantity - (quantity / 3);
+        return paidMangoes * price;
+  }
+}
+```
+
+# 
 

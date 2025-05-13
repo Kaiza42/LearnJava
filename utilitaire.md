@@ -415,6 +415,7 @@ Period periode = Period.between(debut, fin);
 ```java 
 long timestamp = System.currentTimeMillis(); // ex : 1746792058635
 ```
+
 ## 📘 Manipulation avec `StringBuilder`
 
 
@@ -551,4 +552,35 @@ int capacite = sb.capacity(); // 16 par défaut
 
 ```java
 StringBuilder sb = new StringBuilder();
-sb.ensureCapacity(50); // Capacité augmen
+sb.ensureCapacity(50); // Capacité augmentée si < 50
+```
+
+---
+
+### `trimToSize()`
+> Réduit la capacité au strict minimum nécessaire.
+
+```java
+StringBuilder sb = new StringBuilder("Texte");
+sb.trimToSize();
+```
+
+---
+
+### `setLength()`
+> Modifie la longueur de la chaîne. Tronque si plus courte ou remplit avec \u0000 si plus longue.
+
+```java
+StringBuilder sb = new StringBuilder("Salut");
+sb.setLength(3); // "Sal"
+```
+
+---
+
+### `substring()`
+> Retourne une sous-chaîne à partir du contenu du `StringBuilder`, sous forme de `String`.
+
+```java
+StringBuilder sb = new StringBuilder("Programmation");
+String sousChaine = sb.substring(0, 7); // "Program"
+```
