@@ -1000,5 +1000,148 @@ public class Kata {
 }
 ```
 
+# Sum of positive / 61
 
+```java
+public class Positive{
+  public static int sum(int[] arr){
+    int total =0;
+    for (int i = 0; i < arr.length; i++){
+      if (arr[i] > 0) {
+        total += arr[i];
+      }
+    }
+    return total;
+  }
+}
+```
+
+# Sum of positive / 62
+
+```java 
+public class Positive{
+
+  public static int sum(int[] arr){
+    int total =0;
+    for (int i = 0; i < arr.length; i++){
+      if (arr[i] > 0) {
+        total += arr[i];
+      }
+    }
+    return total;
+  }
+
+}
+```
+
+# Is the string uppercase? kyu 8 / 63
+
+```java
+public class Kata {
+    public static boolean isUpperCase(String s) {
+        for(int i = 0; i < s.length(); i++){
+          char carac = s.charAt(i);
+          if(Character.isLetter(carac)&& !Character.isUpperCase(carac)){
+            return false;
+          }
+        }
+      return true;
+    }
+}
+```
+
+# Multiplication table for number kyu 8 / 64
+
+```java
+class Kata {
+    public static String multiTable(int num) {
+      String result = "";
+        for(int i = 1; i <= 10; i++){
+           
+          result += i + " * " + num + " = " + (i * num);
+         if (i != 10){
+           result += "\n";
+         } 
+        }
+      return result;
+    }
+} 
+```
+
+
+#  No zeros for heroes kyu 8 / 65
+
+```java
+public class NoBoring {
+    public static int noBoringZeros(int n) {
+        if(n == 0) {
+          return 0;
+        }
+      while(n % 10 == 0) {
+        n/= 10;
+      }
+      return n;
+    }
+}
+```
+
+# The 'if' function / 66
+
+```java
+public class Kata {
+  public static void _if(Boolean bool, Runnable func1, Runnable func2) {
+    if (Boolean.TRUE.equals(bool)) {
+      func1.run();
+    } else {
+      func2.run(); 
+    }
+  }
+}
+```
+
+# Return the day kyu 8 / 67
+
+```java 
+public class DayOfWeek {
+
+    public static String getDay(int n) {
+        switch(n){
+            case 1: 
+            return "Sunday";
+            case 2: 
+            return "Monday";
+            case 3: 
+            return "Tuesday";
+            case 4: 
+            return "Wednesday";
+            case 5: 
+            return "Thursday";
+            case 6: 
+            return "Friday";
+            case 7: 
+            return "Saturday";
+            default : 
+            return "Wrong, please enter a number between 1 and 7";
+        }
+ }
+  
+} 
+```
+
+# 101 Dalmatians - squash the bugs, not the dogs! / 68
+
+```java 
+public class ZywOo {
+
+  public static String howManyDalmatians(int number) {
+    String[] dogs = {
+            "Hardly any",
+            "More than a handful!",
+            "Woah that's a lot of dogs!",
+            "101 DALMATIANS!!!"
+        };
+    return number <= 10 ? dogs[0] : number <= 50 ? dogs[1] : number == 101 ? dogs[3] : dogs[2];
+ } 
+}
+```
 

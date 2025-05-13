@@ -19,6 +19,8 @@ Voici les méthodes les plus utilisées sur les chaînes de caractères en Java,
 - [🔤 Manipulation de chaînes (`String`)](#-manipulation-de-chaînes-string)
 - [🧮 Mathématique en Java](#-mathématique-en-java)
 - [📅 Dates & Temps en Java](#-dates--temps-en-java)
+- [🧱 Manipulation avec `StringBuilder`](#-manipulation-avec-stringbuilder)
+
 
 ---
 
@@ -413,3 +415,140 @@ Period periode = Period.between(debut, fin);
 ```java 
 long timestamp = System.currentTimeMillis(); // ex : 1746792058635
 ```
+## 📘 Manipulation avec `StringBuilder`
+
+
+- [`append()`](#append)
+- [`insert()`](#insert)
+- [`delete()`](#delete)
+- [`deleteCharAt()`](#deletecharat)
+- [`replace()`](#replace)
+- [`reverse()`](#reverse)
+- [`toString()`](#tostring)
+- [`setCharAt()`](#setcharat)
+- [`charAt()`](#charat)
+- [`length()`](#length)
+- [`capacity()`](#capacity)
+- [`ensureCapacity()`](#ensurecapacity)
+- [`trimToSize()`](#trimtosize)
+- [`setLength()`](#setlength)
+- [`substring()`](#substring)
+
+---
+
+### `append()`
+> Ajoute du contenu à la fin du `StringBuilder`.
+
+```java
+StringBuilder sb = new StringBuilder("Bonjour");
+sb.append(" tout le monde"); // "Bonjour tout le monde"
+```
+
+---
+
+### `insert()`
+> Insère une chaîne à une position donnée.
+
+```java
+StringBuilder sb = new StringBuilder("Hello !");
+sb.insert(5, " world"); // "Hello world !"
+```
+
+---
+
+### `delete()`
+> Supprime une portion de texte entre deux indices (début inclus, fin exclu).
+
+```java
+StringBuilder sb = new StringBuilder("Programmation");
+sb.delete(6, 11); // "Prograion"
+```
+
+---
+
+### `deleteCharAt()`
+> Supprime le caractère à l’indice spécifié.
+
+```java
+StringBuilder sb = new StringBuilder("Bonjour");
+sb.deleteCharAt(3); // "Bonour"
+```
+
+---
+
+### `replace()`
+> Remplace une portion de texte entre deux indices par une autre chaîne.
+
+```java
+StringBuilder sb = new StringBuilder("Salut tout le monde");
+sb.replace(6, 10, "à"); // "Salut à le monde"
+```
+
+---
+
+### `reverse()`
+> Inverse les caractères du `StringBuilder`.
+
+```java
+StringBuilder sb = new StringBuilder("Java");
+sb.reverse(); // "avaJ"
+```
+
+---
+
+### `toString()`
+> Convertit le contenu du `StringBuilder` en un objet `String`.
+
+```java
+StringBuilder sb = new StringBuilder("Test");
+String resultat = sb.toString(); // "Test"
+```
+
+---
+
+### `setCharAt()`
+> Modifie le caractère à une position donnée.
+
+```java
+StringBuilder sb = new StringBuilder("pomme");
+sb.setCharAt(0, 't'); // "tomme"
+```
+
+---
+
+### `charAt()`
+> Retourne le caractère à une position donnée.
+
+```java
+StringBuilder sb = new StringBuilder("Test");
+char c = sb.charAt(2); // 's'
+```
+
+---
+
+### `length()`
+> Retourne la longueur actuelle de la chaîne.
+
+```java
+StringBuilder sb = new StringBuilder("Bonjour");
+int longueur = sb.length(); // 7
+```
+
+---
+
+### `capacity()`
+> Retourne la capacité actuelle (nombre de caractères que le buffer peut contenir sans redimensionnement).
+
+```java
+StringBuilder sb = new StringBuilder();
+int capacite = sb.capacity(); // 16 par défaut
+```
+
+---
+
+### `ensureCapacity()`
+> Augmente la capacité minimale si nécessaire.
+
+```java
+StringBuilder sb = new StringBuilder();
+sb.ensureCapacity(50); // Capacité augmen
