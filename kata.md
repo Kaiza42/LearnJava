@@ -1377,6 +1377,28 @@ public class Kata {
 }
 ```
 
-#  / 84
+# Shortest Word kyu 7 / 84
+
+```java
+public class Kata {
+    public static int findShort(String s) {
+           String[] texte = s.split(" ");
+    int min = Integer.MAX_VALUE;
+    
+    for (String textes : texte){
+      if(textes.length() < min){
+        min = textes.length();
+      }
+    }
+    return min;
+    }
+}
+```
+
+#  / 85
+
+```java 
+
+```
 
 
