@@ -1396,10 +1396,217 @@ public class NumberFun {
 }
 ```
 
-# 
+# Find the unique number kyu 6 / 93
 
 ```java 
+// Make sure your class is public
+public class Kata {
+    public static double findUniq(double arr[]) {
+      double doublon;
+      
+      if(arr[0] == arr[1]){
+        doublon = arr[0];
+      } else if (arr[0] == arr[2]) {
+        return arr[1];
+      }else {
+        return arr[0];
+      }    
+      for( double arrr : arr) {
+        if(arrr != doublon){
+          return arrr;
+        }
+      }
+      return -1;
+    }
+}
+```
 
+# Convert string to camel case kyu 6 / 94
+
+```java 
+import java.lang.StringBuilder;
+import java.util.regex.*;
+class Solution{
+
+  static String toCamelCase(String s){
+    Pattern pattern = Pattern.compile("[-_](\\p{L})");
+    Matcher matcher = pattern.matcher(s);
+    StringBuffer result = new StringBuffer();
+    while (matcher.find()) {
+      matcher.appendReplacement(result, matcher.group(1).toUpperCase());
+    }
+    matcher.appendTail(result);
+    return result.toString();
+  }
+}
+```
+
+# Function 1 - hello world kyu 8 / 95
+
+```java 
+public class HelloWorld {
+   public static String greet(){
+     return "hello world!";
+     }
+}
+```
+
+# test 1-2-3 kyu 7 / 96
+
+```java 
+import java.util.*;
+
+public class LineNumbering {
+    public static List<String> number(List<String> lines) {
+        List<String> resultat = new ArrayList<>();
+      
+      for (int i = 0; i < lines.size() ; i++){
+        resultat.add((i+1 )+  ": " + lines.get(i));
+      }
+      return resultat;
+    }
+}
+```
+
+# Snail kyu 4 / 97 
+
+```java 
+import java.util.*;
+public class Snail {
+
+    public static int[] snail(int[][] array) {
+     if (array == null || array.length == 0|| array[0].length == 0){
+       return new int[0];
+     }
+      
+      int n = array.length; 
+      List<Integer> resultat = new ArrayList<>();
+      
+      int haut= 0;
+      int bas = n - 1;
+      int gauche = 0;
+      int droite = n - 1;
+      
+      
+      while (haut <= bas && gauche <= droite){
+        
+        for (int i = gauche; i <= droite; i++){
+          
+          resultat.add(array[haut][i]);
+          
+        }
+        haut++;
+        
+        for (int i = haut; i <= bas; i++){
+          resultat.add(array[i][droite]);
+        }
+        droite--;
+        
+        if (haut <= bas){
+          for (int i = droite; i >= gauche; i--){  
+            resultat.add(array[bas][i]);
+          }
+          bas--;
+        }
+        if (gauche <= droite){
+          for(int i = bas; i >= haut; i--){
+            resultat.add(array[i][gauche]);
+          }
+          gauche++;
+        }
+      }
+      return resultat.stream().mapToInt(Integer::intValue).toArray();
+   } 
+}
+```
+
+# Do I get a bonus? kyu 8 / 98
+
+
+```java 
+public class Kata{
+  public static String bonusTime(final int salary, final boolean bonus) {
+    int resultat = bonus ? salary * 10 : salary;
+      return "\u00A3" + resultat;
+    
+  }
+}
+```
+
+# Get Planet Name By ID kyu 8 / 99
+
+```java 
+class Planet {
+  static String getPlanetName(int id) {
+    String name = null;
+    switch (id) {
+      case 1:
+      return  name = "Mercury";
+      case 2:
+       return name = "Venus";
+      case 3:
+         return name = "Earth";
+      case 4:
+         return name = "Mars";
+      case 5:
+         return name = "Jupiter";
+      case 6:
+        return  name = "Saturn";
+      case 7:
+         return name = "Uranus";
+      case 8:
+         return name = "Neptune";
+    }
+    return name;
+  }
+}
+```
+
+# Human readable duration format kyu 4 / 100
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+public class TimeFormatter {
+    
+    public static String formatDuration(int seconds) {
+        if (seconds == 0){
+          return "now";
+        }
+        int[] temp = {365 * 24 *3600, 24 * 3600, 3600,60,1};
+        String[] temps = {"year", "day", "hour", "minute", "second" };
+        List<String> list = new ArrayList<>();
+      
+        for(int i = 0; i < temp.length; i++){
+          int value = seconds / temp[i];
+          if(value > 0){
+            list.add(value + " " + temps[i] + (value > 1 ? "s" : ""));
+            seconds %= temp[i];
+          }
+        }
+      
+      if(list.size() == 1){
+        return list.get(0);
+      }
+      return String.join(", ", list.subList(0, list.size() -1)) + " and " + list.get(list.size() - 1);
+    }
+}
+```
+
+# A Needle in the Haystack kyu 8 / 101
+
+```java
+public class Kata {
+  public static String findNeedle(Object[] haystack) {
+    // Your code here
+      for (int i = 0; i < haystack.length; i++){
+        if("needle".equals(haystack[i])){
+          return "found the needle at position " + i;
+        }
+      }
+    return "";
+  }
+}
 ```
 
 
