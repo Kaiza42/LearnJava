@@ -1339,9 +1339,44 @@ public class FizzBuzzArray {
 }
 ```
 
-#  / 82
+# Grasshopper - Summation kyu 8 / 82
 
 ```java 
+public class GrassHopper {
 
+    public static int summation(int n) {
+      int resultat = 0;
+      for(int somme = 1; somme <= n ;somme++ ){
+        resultat += somme;
+      }
+      return resultat;
+    }
+}
 ```
+
+# Highest and Lowest kyu 7 / 83
+
+```java 
+public class Kata {
+  public static String highAndLow(String numbers) {
+    // Code here or
+    String[] test = numbers.split(" ");
+    int min = Integer.MAX_VALUE;
+    int max = Integer.MIN_VALUE;   
+    for (String nombre : test){
+      int valeur  = Integer.parseInt(nombre);
+      
+      if (valeur < min)
+       min = valeur; 
+      if( valeur > max){
+       max = valeur;
+      }
+    }
+      return max + " " + min;
+  }
+}
+```
+
+#  / 84
+
 
