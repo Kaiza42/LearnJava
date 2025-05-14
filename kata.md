@@ -98,119 +98,6 @@ public class StringToNumber {
 ```java 
 
 public class Kata
-... (605lignes restantes)
-Réduire
-message.txt
-13 Ko
-c'est pour moi tkt
-﻿
-Shivii_-
-shivii_
-IL
- 
- 
- 
-Web/Discord Bot Developer
-# Convert boolean values to strings 'Yes' or 'No'. kyu 8 / 1
-
-```java
-class YesOrNo
-{
-  public static String boolToWord(boolean b)
-  {
-    if(b == true){
-      return "Yes";
-    }else {
-      return "No";
-    }
-  }
-  
-}
-```
-
-# Even or Odd kyu 8 / 2
-
-```java
-public class Kata {
-    public static String evenOrOdd(int number) {
-        if(number % 2 == 0){
-          return "Even";
-          
-        }else {
-          return "Odd";
-        }
-    }
-}
-```
-
-# Multiply kyu 8 / 3
-
-```java
-public class Multiply {
-    public static Double multiply(Double a, Double b) {
-        return a * b;
-    }
-}
-```
-
-# Return Negative kyu 8 / 4
-
-```java
-public class Kata {
-  public static int makeNegative(final int x) {
-    return -Math.abs(x);
-  }
-}
-```
-
-# String repeat kyu 8 / 5
-
-```java
-public class Solution {
-    public static String repeatStr(final int repeat, final String string) {
-        return string.repeat(repeat);
-    }
-}
-```
-
-# Remove string spaces kyu 8 / 6
-
-```java
-public class Kata {
-    public static String noSpace(final String x) {
-        return x.replace(" ", "");
-    }
-}
-```
-
-# returning strings kyu 8 / 7
-
-```java
-public class Kata
-{
-  public static String greet(String name)
-  {
-    return "Hello, "+ name +" how are you doing today?";
-  }
-}
-
-```
-
-# Convert a String to a Number kyu 8 / 8
-
-```java
-public class StringToNumber {
-  public static int stringToNumber(String str) {
-    return Integer.parseInt(str);
-  }
-}
-```
-
-# Opposite number kyu 8 / 9
-
-```java 
-
-public class Kata
     {
         public static int opposite(int number)
         {
@@ -1395,9 +1282,63 @@ public class Kata {
 }
 ```
 
-#  / 85
+# Regexp Basics - is it a eight bit signed number? kyu 7 / 85
 
 ```java 
+public class StringUtils {
+  
+  public static boolean isSignedEightBitNumber(String s) {
+    return s.matches("(-128|-12[0-7]|-1[01][0-9]|-[1-9][0-9]?|0|[1-9][0-9]?|1[01][0-9]|12[0-7])");
+  }
+}
+```
+
+# Exclamation marks series #5: Remove all exclamation marks from the end of words kyu 7 / 86
+
+```java
+public class R {
+  public static String removeBang(String str) {
+    return str.replaceAll("\\b!+", "");
+  }
+}
+```
+
+# regex pattern to check if string has all characters kyu 6 / 87
+
+```java 
+class Kata {
+  static String regexContainsAll(String str) {
+    return str.replaceAll(".", "(?=.*$0)");
+  }
+}
+```
+
+# Without the letter 'E' kyu 7 / 88
+
+```java
+public class WithoutLetterE {
+  public static String findE(String str){
+    if(str == null){
+      return null;
+    }
+    
+    if (str.isEmpty()){
+      return "";
+    }
+    
+    int count = str.split("[eE]", -1).length - 1;
+    if(count == 0){
+      return "There is no \"e\".";
+    }else {
+      return String.valueOf(count);
+    }
+  }
+}
+```
+
+# / 89
+
+```java
 
 ```
 
