@@ -1136,7 +1136,6 @@ public class Goals {
 
 # Count Odd Numbers below n kyu 8 / 76
 
-
 ```java 
 public class Kata {
 
@@ -1321,11 +1320,11 @@ public class WithoutLetterE {
     if(str == null){
       return null;
     }
-    
+
     if (str.isEmpty()){
       return "";
     }
-    
+
     int count = str.split("[eE]", -1).length - 1;
     if(count == 0){
       return "There is no \"e\".";
@@ -1336,9 +1335,70 @@ public class WithoutLetterE {
 }
 ```
 
-# / 89
+# The old switcheroo kyu 7 / 89
 
 ```java
+public class Kata {
+  public static String vowel2Index(String s) {
+      StringBuilder sb = new StringBuilder();
+      for (int i = 0; i < s.length(); i++) {
+        if ("aeiouAEIOU".indexOf(s.charAt(i)) == -1) sb.append(s.charAt(i));
+        else sb.append(i + 1);
+      }
+      return sb.toString();
+  }
+}
+```
+
+# You're a square ! kyu 7 / 90
+
+```java
+public class Square {    
+    public static boolean isSquare(int n) {        
+        if (n < 0){
+          return false;
+        }
+      
+      int carrer = (int) Math.sqrt(n);
+      return carrer * carrer == n;
+    }
+}
+```
+
+# Are You Playing Banjo? kyu 8 / 91
+
+```java
+public class Banjo {
+  public static String areYouPlayingBanjo(String name) {
+    if(name.startsWith("r") || name.startsWith("R")){
+      return name + " plays banjo";
+    }else {
+      return name + " does not play banjo";
+    }
+  }
+}
+```
+
+# Find the next perfect square! kyu 7 / 92
+
+```java 
+public class NumberFun {
+  public static long findNextSquare(long sq) {
+      double carrer = Math.sqrt(sq);
+    
+    if (carrer == (long) carrer){
+      long next = (long) carrer +1;
+      return next * next;
+    }else {
+      return -1;
+    }
+  }
+}
+```
+
+# 
+
+```java 
 
 ```
 
