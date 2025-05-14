@@ -179,6 +179,7 @@ Voici une compilation des "petits mots" liés aux mathématiques en Java, inclua
     - [`Math.random()`](#mathrandom)
     - [`Math.PI` / `Math.E`](#mathpi--mathe)
 - [🔢 Conversions numériques (`Integer`, `Double`, etc.)](#-conversions-numériques-integer-double-etc)
+    - [`Integer.MIN_VALUE` / `MAX_VALUE`](#integermin_value--max_value)
     - [`Integer.parseInt()`](#integerparseintstring)
     - [`Double.parseDouble()`](#doubleparsedoublestring)
     - [`String.valueOf()`](#stringvalueofint)
@@ -260,6 +261,14 @@ double exponentielle = Math.E; // Constante e
 ```
 
 ## 🔢 Conversions numériques (Integer, Double, etc.)
+
+### `Integer.MIN_VALUE` / `Integer.MAX_VALUE`
+> Constantes représentant les bornes minimales et maximales que peut prendre un entier (`int`) en Java.
+
+```java
+int min = Integer.MIN_VALUE; // -2147483648
+int max = Integer.MAX_VALUE; // 2147483647
+```
 
 ### `Integer.parseInt(String)`
 > Convertit une chaîne en entier.

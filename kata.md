@@ -1286,5 +1286,62 @@ public class Mango{
 }
 ```
 
-# 
+# Odd or Even? kyu 7 / 79
+
+```java
+public class Codewars {
+  public static String oddOrEven (int[] array) {
+    int total = 0;
+      for (int i : array){
+         total += i;
+  }
+    return (total % 2 == 0) ? "even" : "odd";
+  }
+}
+```
+
+#  Simple Fun #176: Reverse Letter kyu 7 / 80
+
+```java 
+public class Kata {
+    public static String reverseLetter(final String str) {
+        StringBuilder sub = new StringBuilder();
+      for (char phrases : str.toCharArray()){
+        if (Character.isLetter(phrases)){
+          sub.append(phrases);
+        }
+      }
+    return sub.reverse().toString();
+    }
+}
+```
+
+# Fizz Buzz kyu 7 / 81
+
+```java
+public class FizzBuzzArray {
+    public static String[] fizzBuzz(int n) {
+        String[] result = new String[n];
+        int index = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                result[index++] = "FizzBuzz";
+            } else if (i % 3 == 0) {
+                result[index++] = "Fizz";
+            } else if (i % 5 == 0) {
+                result[index++] = "Buzz";
+            } else {
+                result[index++] = String.valueOf(i);
+            }
+        }
+        return result;
+    }
+}
+```
+
+#  / 82
+
+```java 
+
+```
 
