@@ -1832,7 +1832,7 @@ public class HowDoICompare {
 }
 ```
 
-# Debug Sum of Digits of a Number / 113
+# Debug Sum of Digits of a Number kyu 8 / 113
 
 ```java 
 public class Solution {
