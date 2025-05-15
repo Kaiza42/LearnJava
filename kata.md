@@ -1676,10 +1676,280 @@ public class FirstClass {
 }
 ```
 
-# 
+# String incrementer / 106
 
 ```java
+import java.math.BigInteger;
+public class Kata {
+  public static String incrementString(String str) {
+      int i = str.length() - 1;
+      while (i >= 0 && Character.isDigit(str.charAt(i))){
+        i--;
+      }
+    
+    String debut = str.substring(0, i +1);
+    String chiffre = str.substring(i+1);
+    
+    if (chiffre.isEmpty()){
+      return str + "1";
+    }
+    
+    BigInteger nombre = new BigInteger(chiffre);
+    nombre = nombre.add(BigInteger.ONE);
+    
+    String nouveauNombre = nombre.toString();
+    int zerosInitiaux = chiffre.length() - nouveauNombre.length();
+    if (zerosInitiaux  > 0) {
+      nouveauNombre = "0".repeat(zerosInitiaux) + nouveauNombre;
+    }
+    
+    
+    return debut + nouveauNombre;
+  }
+}
+```
 
+# / 107
+
+```java
+class Swapper{
+
+  public Object[] arguments;
+  
+  public Swapper(final Object[] args){
+    arguments=args;
+  }
+  
+  public void swapValues() {
+   
+    Object temp = arguments[0];
+    arguments[0] = arguments[1];
+    arguments[1] = temp;
+  }
+}
+```
+
+# Grasshopper - Debug kyu 8 / 108
+
+```java
+public class GrassHopper {
+
+    public static String weatherInfo(int temp) {
+        double c = convertToCelsius(temp);
+        if (c <= 0)
+            return (c + " is freezing temperature");
+        else
+            return (c + " is above freezing temperature");
+    }
+
+    public static double convertToCelsius(int temperature) {
+        return (temperature -32) * 5.0 / 9;
+    }
+}
+```
+
+# Ghost code?! kyu 8 / 109
+
+```java
+public class GhostCode{
+  public static String helloName(String name){
+    if( name == null || name.isEmpty()){
+      return "Hello world!";
+    }else{
+      return "Hello my name is " + name;
+    }
+  }
+}
+```
+
+# Unexpected parsing kyu 8 / 110
+
+```java 
+import java.util.HashMap;
+
+public class Kata {
+
+    public static HashMap <String, String> getStatus(boolean isBusy) {
+        HashMap<String, String> status = new HashMap<>();
+      
+        if (isBusy) {
+          status.put("status", "busy");
+        } else {
+          status.put("status","available");
+        }
+
+        return status;
+    }
+  
+}
+```
+
+# FIXME: Get Full Name kyu 7 / 111
+
+```java
+public class Dinglemouse {
+
+  private String firstName;
+  private String lastName;
+  
+  public Dinglemouse(String firstName, String lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  
+  public String getFullName() { 
+    if(firstName.isEmpty()){
+      return lastName;
+    }
+    if(lastName.isEmpty()){
+      return firstName;
+    }
+    return firstName + " " + lastName;
+  }
+  
+}
+```
+
+
+# How do I compare numbers? kyu 8 / 112
+
+```java
+public class HowDoICompare {
+    public static String whatIs(Integer x) {
+        for (Object[] p : specialNumbers) {
+            if (p[0].equals(x))
+              return (String) p[1];
+            
+                
+        }
+        return "nothing";
+    }
+    
+    static final Object[][] specialNumbers = {
+        {42, "everything"},
+        {42 * 42, "everything squared"},
+    };
+}
+```
+
+# Debug Sum of Digits of a Number / 113
+
+```java 
+public class Solution {
+  public static int sumOfDigits(int n) {
+    int sum = 0;
+    String digits = n + "";
+    for (int i = 0; i < digits.length(); i++) {
+      sum += digits.charAt(i) -  '0';
+    }
+    return sum;
+  }
+}
+```
+
+# How do I compare numbers? kyu 8 / 114
+
+```java
+import java.util.*;
+public class DescendingOrder {
+  public static int sortDesc(final int num) {
+    char[] chiffre = String.valueOf(num).toCharArray();
+    
+    Arrays.sort(chiffre);
+    
+    StringBuilder sb = new StringBuilder(new String(chiffre));
+    sb.reverse();
+    
+    return Integer.parseInt(sb.toString());
+  }
+}
+```
+
+
+# Is he gonna survive? kyu 8 / 115 
+
+```java
+class Solution {
+  public static boolean hero(int bullets, int dragons) {
+    return (long)bullets >= (long)dragons * 2;
+  }
+}
+```
+
+# Binary Addition kyu 7 / 116
+
+```java
+public class Kata{
+  
+  public static String binaryAddition(int a, int b){
+    int sum = a + b;
+    return Integer.toBinaryString(sum);
+  }
+}
+```
+
+# Area or Perimeter kyu 8 / 117
+
+```java
+public class Solution {
+    public static int areaOrPerimeter (int l, int w) {
+        if (l == w){
+          return l * w;
+        }else {
+          return 2 * (l + w);
+        }
+    }
+}
+```
+
+# The highest profit wins! kyu 7 / 118
+
+```java
+class MinMax {
+    public static int[] minMax(int[] arr) {
+        int min = arr[0];
+      int max = arr[0];
+      
+      for(int num : arr){
+        if (num < min){
+          min = num;
+        }
+        if(num > max){
+          max = num;
+        }
+      }
+      return new int[]{min,max};
+    }
+}
+```
+
+# DNA to RNA Conversion kyu 8 / 119
+
+```java
+public class Bio {
+    public String dnaToRna(String dna) {
+        return dna.replace('T','U');
+    } 
+}
+```
+
+# Fake Binary kyu 8 / 120
+
+```java
+public class FakeBinary {
+    public static String fakeBin(String numberString) {
+        StringBuilder resultat = new StringBuilder();
+      
+      for(char c : numberString.toCharArray()){
+        if( c < '5'){
+          resultat.append('0');
+        } else {
+          resultat.append('1');
+        }
+      }
+      return resultat.toString();
+    }
+}
 ```
 
 
