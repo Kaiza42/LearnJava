@@ -291,6 +291,10 @@ double decimal = Double.parseDouble("3.14"); // 3.14
 String texte = String.valueOf(123); // "123"
 ```
 
+```java
+int chiffre = Integer.valueOf("23");
+```
+
 ### `new BigDecimal(String)`
 > Crée un nombre décimal très précis (utilisé en finance).
 

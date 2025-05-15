@@ -534,7 +534,6 @@ public class Sid {
 ```java
 public class KeepHydrated  {
   public static int liters(double time)  {    
-    //Your code goes here! Hint: You should change that -1
      return (int) Math.floor(time * 0.5);
   }
 }
@@ -1399,7 +1398,6 @@ public class NumberFun {
 # Find the unique number kyu 6 / 93
 
 ```java 
-// Make sure your class is public
 public class Kata {
     public static double findUniq(double arr[]) {
       double doublon;
@@ -1607,6 +1605,81 @@ public class Kata {
     return "";
   }
 }
+```
+
+# Switcheroo kyu 7 / 102
+
+```java
+public class Switch {
+  public static String switcheroo(String x) {
+    StringBuilder sb = new StringBuilder(x);
+    for(int i = 0; i < x.length(); i++){
+      if(sb.charAt(i) == 'a'){
+         sb.setCharAt(i, 'b');
+      }else if (sb.charAt(i) == 'b'){
+        sb.setCharAt(i, 'a');
+      }
+    }
+    return sb.toString();
+  }
+}
+```
+
+# Vowel Count kyu 7 / 103
+
+```java
+public class Vowels {
+
+  public static int getCount(String str) {
+
+        int count = 0;
+      for(int i = 0; i < str.length() ; i++){
+        char c = str.charAt(i);
+        if (c == 'A' || c == 'E' || c == 'O' || c == 'U' || c == 'I' || c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ) {
+                count++;
+            }
+      }
+      return count;
+
+  }
+
+}
+```
+
+# Sum The Strings kyu 8 / 104
+
+```java
+public class Kata{
+  
+  public static String sumStr(String a, String b){ 
+    if(a == ""){
+      a = "0";
+    }
+    if(b == ""){
+      b = "0";
+    }
+  int calcul = Integer.parseInt(a) + Integer.parseInt(b);
+  String resultat = Integer.toString(calcul);
+  return resultat;
+    }
+}
+```
+
+# A + B kyu 8 / 105
+
+```java
+public class FirstClass {
+    public static int sum (int a, int b) {
+        int c = (a + b);
+        return c;
+    }
+}
+```
+
+# 
+
+```java
+
 ```
 
 
