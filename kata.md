@@ -1951,5 +1951,47 @@ public class FakeBinary {
     }
 }
 ```
+# Basic variable assignment kyu 8 / 121
+
+```java
+public class Kata {
+    public static String a = "code";
+    public static String b = "wa.rs";
+    public static String name = a+ b;
+}
+```
+
+# Unfinished Loop - Bug Fixing #1 kyu 8 / 122
+
+```java
+import java.util.*;
+
+class Kata {
+    public static List<Integer> CreateList(int number) {
+        List<Integer> list = new ArrayList<>();
+
+        for (int count = 1; count <= number;count++) {
+            list.add(count);
+        }
+        return list;
+    }
+}
+```
+
+# Thinkful - String Drills: Quotable kyu 7 / 123
+
+```java
+public class Kata{
+  public static String quotable(String name, String quote){
+    return name + " said: "+ '"' + quote + '"';
+  }
+}
+```
+
+#  / 124
+
+```java
+
+```
 
 
