@@ -1988,10 +1988,179 @@ public class Kata{
 }
 ```
 
-#  / 124
+# Jaden Casing Strings kyu 7 / 124
 
 ```java
+public class JadenCase {
 
+	public String toJadenCase(String phrase) {
+  
+    
+     if(phrase == null || phrase.isEmpty()){
+       return null;
+     }
+    StringBuilder sb = new StringBuilder();
+    String[] mot = phrase.split(" ");
+    for (String mots : mot){
+      if(!mots.isEmpty()){
+        sb.append(Character.toUpperCase(mots.charAt(0)));
+        
+        if(mots.length() > 1){
+          sb.append(mots.substring(1).toLowerCase());
+        }
+        sb.append(" ");
+      }
+    }
+    
+    return sb.toString().trim();
+	}
+
+}
 ```
+
+# Remove First and Last Character kyu 8 / 125
+
+```java
+public class RemoveChars {
+    public static String remove(String str) {
+        
+        
+      
+        return str.substring(1,str.length() - 1);
+      
+    }
+}
+```
+
+# Square Every Digit kyu 7 / 126
+
+```java
+public class SquareDigit {
+
+  public int squareDigits(int n) {
+    String resultat = "";
+    
+    for (char c : String.valueOf(n).toCharArray()) {
+      int d = c - '0';
+      resultat += (d * d);
+    }
+    return Integer.parseInt(resultat);
+  }
+}
+```
+
+# You only need one - Beginner kyu 8 / 127
+
+```java
+import java.util.*;
+public class Solution {
+
+    public static boolean check(Object[] a, Object x) {     
+        return Arrays.asList(a).contains(x); 
+    }
+}
+```
+
+# Complementary DNA kyu 7 / 128
+
+```java
+public class DnaStrand {
+  public static String makeComplement(String dna) {
+    StringBuilder resultat = new StringBuilder();
+    
+    for (char lettre : dna.toCharArray()){
+      switch(lettre){
+          case 'A':
+          resultat.append('T');
+          break;
+          case 'T':
+          resultat.append('A');
+          break;
+          case 'C':
+          resultat.append('G');
+          break;
+          case 'G':
+          resultat.append('C');
+          break;
+      }
+    }
+    return resultat.toString();
+  }
+}
+```
+
+# Removing Elements kyu 8 / 129
+
+```java 
+import java.util.ArrayList;
+import java.util.List;
+public class Kata {
+  
+  public static Object[] removeEveryOther(Object[] arr) {
+    List<Object> resultat = new ArrayList<>();
+    
+    for(int i = 0; i < arr.length; i +=2){
+      resultat.add(arr[i]);
+    }
+    return resultat.toArray();
+  }
+}
+```
+
+# Credit Card Mask kyu 7 / 130
+
+```java
+public class Maskify {
+    public static String maskify(String str) {
+      int length = str.length();
+      if (length <= 4){
+        return str;
+      }
+      
+      StringBuilder masque = new StringBuilder();
+      for (int i = 0; i < length -4 ; i++){
+        masque.append('#');
+      }
+      masque.append(str.substring(length - 4));
+      
+      return masque.toString();
+    }
+}
+```
+
+# More than Zero? kyu 7 / 131
+
+```java
+class MoreThanZero {
+  public static String corrections(int x) {
+    if(x > 0){
+     return x + " is more than zero.";
+    }else{
+      return x + " is equal to or less than zero.";
+    }
+      
+  }
+}
+```
+
+# Swap pairs in Array kyu 7 / 132
+
+```java
+ public class Swappairs {
+
+    public Object[][][] swapp(Object[][] input) {
+    Object[][] outp = new Object [input.length][2]; 
+    for(int i = 0; i < input.length; i++){
+      Object[] pair = input[i];
+      outp[i][0] = pair[1];
+      outp[i][1] = pair[0];
+      }
+    Object[][][] res={input,outp};
+        return res;
+    }
+}
+```
+
+
 
 
