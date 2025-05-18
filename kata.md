@@ -2161,6 +2161,527 @@ class MoreThanZero {
 }
 ```
 
+# Calculate average kyu 8 / 133
+
+```java
+public class Kata {
+    public static double findAverage(int[] array) {
+         if (array == null || array.length == 0){
+           return 0;
+         }
+      
+      int sum = 0;
+      for (int arrays : array){
+        sum += arrays;
+      }
+      
+      return (double) sum / array.length;
+    }
+}
+```
+
+# Sum of odd numbers kyu 7 / 134
+
+```java
+class RowSumOddNumbers {
+    public static int rowSumOddNumbers(int n) {
+        return n * n * n;
+    }
+}
+```
+
+# Remove the minimum kyu 7 / 135 
+
+```java 
+import java.util.*;
+public class Remover {
+
+  public static int[] removeSmallest(int[] numbers) {
+    if (numbers.length == 0){
+      return new int[0];
+    }
+    
+    int min = numbers[0];
+    
+    int indexMin = 0;
+    
+    for (int i = 1; i < numbers.length; i++) {
+      if (numbers[i] < min) {
+        min = numbers[i];
+        indexMin = i;
+      }
+    }
+    int[] result = new int[numbers.length -1];
+    int j = 0;
+    
+    for (int i = 0; i < numbers.length; i++) {
+      if( i != indexMin) {
+        result[j] = numbers[i];
+        j++;
+      }
+    }
+    return result;
+  }
+}
+```
+
+# Grasshopper - Terminal game move function / 136
+
+```java 
+public class Move {
+    public static int move(int position, int roll) {
+        return position + 2 * roll;
+    }
+}
+```
 
 
+# All Star Code Challenge #18 kyu 8 / 137
+
+```java
+public class CodeWars {
+  public static int strCount(String str, char letter) {
+    int compte = 0;
+    
+    for(int i = 0; i < str.length(); i++){
+      if (str.charAt(i) == letter){
+        compte++;
+      }
+    }
+    return compte;
+  }
+}
+```
+
+# Square(n) Sum kyu 8 / 138
+
+```java
+public class Kata
+ {
+  public static int squareSum(int[] n)
+  { 
+   int resultat = 0; 
+    for(int number : n){
+      resultat += number * number;
+    }
+    return resultat;
+  }
+ }
+```
+
+# Volume of a Cuboid kyu 8 / 139
+
+```java
+public class Kata {
+
+  public static double getVolumeOfCuboid(final double length, final double width, final double height) {
+    // Your code here
+    return length * width * height;
+  }
+  
+}
+```
+
+# total amout of points kyu 8 / 140
+
+```java
+public class TotalPoints {
+  
+    public static int points(String[] games) {
+      int point = 0; 
+      
+      for(String game : games){
+        int x = Character.getNumericValue(game.charAt(0));
+        int y = Character.getNumericValue(game.charAt(2));
+        
+        if(x > y){
+          point += 3;
+        } else if (x == y){
+          point += 1;
+        }
+        
+      }
+      return point;
+    }
+}
+```
+
+
+# Transportation on vacation kyu 8 / 141
+
+```java 
+public class Kata {
+  public static int rentalCarCost(int d) {
+    int cost = d * 40;
+    if (d >= 7){
+      cost -= 50;
+    } else if (d >= 3){
+      cost -= 20;
+    }
+    return cost;
+  }
+}
+```
+
+# Reversed sequence kyu 8 / 142
+
+```java
+public class Sequence{
+
+  public static int[] reverse(int n){
+   
+    int [] resultat = new int [n];
+    
+    for (int i = 0; i < n; i++){
+      resultat[i] = n - i;
+    }
+    return resultat;
+  }
+
+}
+```
+
+# Is this a triangle? kyu 7 / 143
+
+```java
+class TriangleTester{
+  public static boolean isTriangle(int a, int b, int c){
+    return a > 0 && b> 0&& c > 0 && a+ b > c && a+ c > b && b +c > a;
+  }
+}
+```
+
+# Will there be enough space? kyu 8 / 144
+
+```java
+public class Bob {
+  public static int enough(int cap, int on, int wait){
+  int resultat = on + wait;
+    return Math.max(0,resultat - cap);
+  }
+}
+```
+
+# The Feast of Many Beasts kyu 8 / 145
+
+```java
+public class Kata {
+
+  public static boolean feast(String beast, String dish) {
+    
+    return beast.charAt(0) == dish.charAt(0) && beast.charAt(beast.length() - 1) == dish.charAt(dish.length() - 1);
+    
+  }
+  
+}
+```
+
+# Array plus array kyu 8 / 146
+
+```java
+public class Sum {
+
+  public static int arrayPlusArray(int[] arr1, int[] arr2) {
+    int resultat = 0;
+    
+    for (int arr3 : arr1){
+      resultat += arr3;
+    }
+    
+    for (int arr4 : arr2){
+      resultat += arr4;
+    }
+    return resultat;
+  }
+
+}
+```   
+
+# Reversed Words kyu 8 / 147
+
+```java
+public class ReverseWords{
+
+ public static String reverseWords(String str){
+     String[] mot = str.split(" ");
+   StringBuilder reverse = new StringBuilder();
+   
+   for(int i = mot.length -1; i >= 0; i--){
+     reverse.append(mot[i]);
+     if (i > 0){
+       reverse.append(" ");
+     }
+     
+   }
+   return reverse.toString();
+ }
+}
+```
+
+# Number of People in the Bus kyu 7 / 148
+
+```java 
+import java.util.ArrayList;
+class Metro {
+  public static int countPassengers(ArrayList<int[]> stops) {
+    int people = 0;
+  for(int[] stop : stops){
+    people += stop[0];
+    people -= stop[1];
+  }
+    return people;
+  }
+}
+```
+
+# Beginner Series #4 Cockroach kyu 8 / 149
+
+```java
+public class Cockroach{
+  public int cockroachSpeed(double x){
+    return (int) Math.floor(x * 100000 / 3600);
+  }
+}
+```
+
+# Function 2 - squaring an argument kyu 8 / 150
+
+```java
+public class Kata
+ {
+  public static int square(int n){
+    return n* n;
+  }
+ }
+ ```
+
+# Sentence Smash kyu 8 / 151
+
+
+```java
+public class SmashWords {
+	public static String smash(String... words) {
+    return String.join(" ", words);
+  }
+}
+```
+# Find the smallest integer in the array kyu 8 / 152
+
+```java 
+import java.util.Arrays;
+public class SmallestIntegerFinder {
+    public static int findSmallestInt(int[] args) {
+     return Arrays.stream(args).min().getAsInt();
+    }
+}
+```
+
+# List Filtering kuy 7 / 153
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+public class Kata {
+  
+  public static List<Object> filterList(final List<Object> list) {
+    List<Object> resultat = new ArrayList<>();
+    for (Object test : list){
+      if (test instanceof Integer){
+        resultat.add((Integer)test);
+      }
+    }
+    return resultat;
+  }
+}
+```
+# Mumbling kyu 7 / 154
+
+
+```java
+public class Accumul {
+    
+    public static String accum(String s) {
+     StringBuilder result = new StringBuilder();
+      
+      if (s == null || s.isEmpty()){
+        return "";
+      }
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+          result.append(Character.toUpperCase(c));
+          for(int j = 0; j < i; j++){
+            result.append(Character.toLowerCase(c));
+          }
+          if ( i != s.length() -1){
+            result.append("-");
+          }
+        }
+      return result.toString();
+    }
+}
+```
+
+# How good are you really? kyu 8 / 155
+
+```java
+public class Kata {
+  public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
+    int total = 0;
+    
+    for(int scord : classPoints){
+      total += scord;
+    }
+    
+    double millieu = (double)total / classPoints.length;
+    return yourPoints > millieu;
+  }
+}
+```
+
+# Find Maximum and Minimum Values of a List kyu 8 / 156
+
+```java
+public class Kata {
+
+  public int min(int[] list) {
+    int min = list[0];
+    for(int numMin : list){
+      if (numMin< min){
+        min = numMin;
+      }
+    }
+    return min;
+  }
+  
+  public int max(int[] list) {
+    int max = list[0];
+    for(int numMax : list){
+      if (numMax > max) {
+        max = numMax;
+      }
+    }
+    return max;
+  }
+}
+```
+
+# Is n divisible by x and y? kyu 8 / 157
+
+```java 
+public class DivisibleNb {
+	public static boolean isDivisible(long n, long x, long y) {
+		return n % x == 0 && n % y == 0;
+	}
+}
+```
+
+# Count the divisors of a number kyu 7 / 158
+
+```java 
+public class FindDivisor {
+
+  public long numberOfDivisors(int n) {
+    int compte = 0;
+  
+    for (int i = 1; i * i <= n; i++){
+      if (n%i ==0){{
+        compte++;
+      }
+        if(i != n / i){
+          compte++;
+        }
+      }
+    }
+    return compte;
+  }
+
+}
+```
+
+# What is between? kyu 8 / 159
+
+```java
+public class Kata {
+
+  public static int[] between(int a, int b) {
+    int[] result = new int[b - a + 1];
+    for(int i = a; i <= b; i++){
+      result[i - a] = i;
+    }
+    return result;
+  }
+}
+```
+
+# Powers of 2 / 160
+
+```java
+public class Kata{
+  public static long[] powersOfTwo(int n){
+    
+    long[]  resultat = new long[n + 1];
+    for( int i = 0; i <= n; i++){
+      resultat[i] = 1L <<i;
+    }
+    return resultat;
+  }
+}
+```
+
+# Cat years, Dog years / 161
+
+```java
+public class Dinglemouse {
+
+  public static int[] humanYearsCatYearsDogYears(final int humanYears) {
+    int catAnnee;
+    int dogAnnee;
+    
+    if (humanYears == 1){
+      catAnnee = 15;
+      dogAnnee = 15;
+    }else if (humanYears == 2){
+      catAnnee = 15 +9;
+      dogAnnee = 15 +9;
+    }else {
+      catAnnee = 15 +9 +(humanYears -2) * 4;
+      dogAnnee = 15 +9 +(humanYears -2) * 5;
+    }
+    return new int[] {humanYears,catAnnee, dogAnnee};
+  }
+
+}
+```
+
+# Find the first non-consecutive number kyu 8 / 162
+
+```java
+class FirstNonConsecutive {
+    static Integer find(final int[] array) {
+        if (array == null || array.length < 2) {
+          return null;
+        }
+      
+      for(int i = 1; i < array.length; i++){
+        if (array[i] != array[i -1] + 1){
+          return array[i];
+        }
+      }
+      return null;
+    }
+}
+```
+
+# Century From Year kyu 8 / 163
+
+```java
+public class Solution {
+  public static int century(int number) {
+    return (number +99) / 100;
+     
+    
+  }
+}
+```
 
