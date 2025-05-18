@@ -2685,3 +2685,39 @@ public class Solution {
 }
 ```
 
+# Count the Monkeys! kyu 8 / 164
+
+```java 
+public class MonkeyCounter
+{
+  public static int[] monkeyCount(final int n){
+    int[] result = new int[n];
+    for(int i = 0; i < n ; i++){
+      result[i] = i +1;
+    }
+    return result;
+  }
+}
+```
+
+# Find the stray number kyu 7 / 165
+
+```java
+class Solution {
+  static int stray(int[] numbers) {
+   int somme = 0;
+    for(int num: numbers){
+      somme ^= num;
+      }
+     return somme;
+    }
+    
+  }
+```
+
+# 
+
+```java
+
+```
+
